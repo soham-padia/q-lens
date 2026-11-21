@@ -1,0 +1,530 @@
+{
+ "what": "FD re-check of the 12 cases whose Q-vs-FD gate failed at h=0.05 (src/swap_tokens.py, scripts/11_swap_tokens.sh); relative L2 error of jvp vs central finite differences over the centred vocabulary",
+ "by_h": {
+  "0.2": [
+   {
+    "func": "language",
+    "src": "Germany",
+    "tgt": "Spain",
+    "layer": 16,
+    "J_vs_fd": 0.0007268495974130929,
+    "Q_vs_fd": 0.03385873883962631,
+    "top10_overlap_halfQ": {
+     "up": 0.9,
+     "down": 1.0
+    },
+    "failed_at_h0.05": true
+   },
+   {
+    "func": "language",
+    "src": "Germany",
+    "tgt": "Spain",
+    "layer": 20,
+    "J_vs_fd": 0.0006273412145674229,
+    "Q_vs_fd": 0.023947596549987793,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 1.0
+    },
+    "failed_at_h0.05": true
+   },
+   {
+    "func": "language",
+    "src": "Germany",
+    "tgt": "Spain",
+    "layer": 24,
+    "J_vs_fd": 0.0028737334068864584,
+    "Q_vs_fd": 0.008131264708936214,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 1.0
+    },
+    "failed_at_h0.05": true
+   },
+   {
+    "func": "language",
+    "src": "Germany",
+    "tgt": "Spain",
+    "layer": 28,
+    "J_vs_fd": 0.0013144928961992264,
+    "Q_vs_fd": 0.020390288904309273,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 1.0
+    },
+    "failed_at_h0.05": true
+   },
+   {
+    "func": "language",
+    "src": "Germany",
+    "tgt": "Spain",
+    "layer": 32,
+    "J_vs_fd": 0.0009328052401542664,
+    "Q_vs_fd": 0.048704784363508224,
+    "top10_overlap_halfQ": {
+     "up": 0.9,
+     "down": 1.0
+    },
+    "failed_at_h0.05": true
+   },
+   {
+    "func": "continent",
+    "src": "Japan",
+    "tgt": "Canada",
+    "layer": 16,
+    "J_vs_fd": 0.0015060895821079612,
+    "Q_vs_fd": 0.06091389060020447,
+    "top10_overlap_halfQ": {
+     "up": 0.9,
+     "down": 0.9
+    },
+    "failed_at_h0.05": true
+   },
+   {
+    "func": "continent",
+    "src": "Japan",
+    "tgt": "Canada",
+    "layer": 20,
+    "J_vs_fd": 0.003181411186233163,
+    "Q_vs_fd": 0.012905125506222248,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 1.0
+    },
+    "failed_at_h0.05": true
+   },
+   {
+    "func": "continent",
+    "src": "Japan",
+    "tgt": "Canada",
+    "layer": 24,
+    "J_vs_fd": 0.020776087418198586,
+    "Q_vs_fd": 0.032652225345373154,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 0.9
+    },
+    "failed_at_h0.05": false
+   },
+   {
+    "func": "continent",
+    "src": "Japan",
+    "tgt": "Canada",
+    "layer": 28,
+    "J_vs_fd": 0.03303094953298569,
+    "Q_vs_fd": 0.05487673729658127,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 1.0
+    },
+    "failed_at_h0.05": false
+   },
+   {
+    "func": "continent",
+    "src": "Japan",
+    "tgt": "Canada",
+    "layer": 32,
+    "J_vs_fd": 0.03053092211484909,
+    "Q_vs_fd": 0.050073131918907166,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 1.0
+    },
+    "failed_at_h0.05": false
+   },
+   {
+    "func": "language",
+    "src": "China",
+    "tgt": "Spain",
+    "layer": 16,
+    "J_vs_fd": 0.0012474608374759555,
+    "Q_vs_fd": 0.01711883768439293,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 1.0
+    },
+    "failed_at_h0.05": true
+   },
+   {
+    "func": "language",
+    "src": "China",
+    "tgt": "Spain",
+    "layer": 20,
+    "J_vs_fd": 0.0012143219355493784,
+    "Q_vs_fd": 0.01950875110924244,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 1.0
+    },
+    "failed_at_h0.05": true
+   },
+   {
+    "func": "language",
+    "src": "China",
+    "tgt": "Spain",
+    "layer": 24,
+    "J_vs_fd": 0.003791260998696089,
+    "Q_vs_fd": 0.011022604070603848,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 1.0
+    },
+    "failed_at_h0.05": true
+   },
+   {
+    "func": "language",
+    "src": "China",
+    "tgt": "Spain",
+    "layer": 28,
+    "J_vs_fd": 0.006562130991369486,
+    "Q_vs_fd": 0.007880542427301407,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 0.9
+    },
+    "failed_at_h0.05": false
+   },
+   {
+    "func": "language",
+    "src": "China",
+    "tgt": "Spain",
+    "layer": 32,
+    "J_vs_fd": 0.004468625411391258,
+    "Q_vs_fd": 0.008219131268560886,
+    "top10_overlap_halfQ": {
+     "up": 0.9,
+     "down": 0.9
+    },
+    "failed_at_h0.05": false
+   },
+   {
+    "func": "continent",
+    "src": "Egypt",
+    "tgt": "Japan",
+    "layer": 16,
+    "J_vs_fd": 0.0028618345968425274,
+    "Q_vs_fd": 0.03497415408492088,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 0.9
+    },
+    "failed_at_h0.05": true
+   },
+   {
+    "func": "continent",
+    "src": "Egypt",
+    "tgt": "Japan",
+    "layer": 20,
+    "J_vs_fd": 0.005348735488951206,
+    "Q_vs_fd": 0.018091529607772827,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 1.0
+    },
+    "failed_at_h0.05": true
+   },
+   {
+    "func": "continent",
+    "src": "Egypt",
+    "tgt": "Japan",
+    "layer": 24,
+    "J_vs_fd": 0.03453909233212471,
+    "Q_vs_fd": 0.0415775403380394,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 1.0
+    },
+    "failed_at_h0.05": false
+   },
+   {
+    "func": "continent",
+    "src": "Egypt",
+    "tgt": "Japan",
+    "layer": 28,
+    "J_vs_fd": 0.03747301921248436,
+    "Q_vs_fd": 0.05104924738407135,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 1.0
+    },
+    "failed_at_h0.05": false
+   },
+   {
+    "func": "continent",
+    "src": "Egypt",
+    "tgt": "Japan",
+    "layer": 32,
+    "J_vs_fd": 0.041890949010849,
+    "Q_vs_fd": 0.06171714887022972,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 0.9
+    },
+    "failed_at_h0.05": false
+   }
+  ],
+  "0.5": [
+   {
+    "func": "language",
+    "src": "Germany",
+    "tgt": "Spain",
+    "layer": 16,
+    "J_vs_fd": 0.003204462118446827,
+    "Q_vs_fd": 0.007590673863887787,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 1.0
+    },
+    "failed_at_h0.05": true
+   },
+   {
+    "func": "language",
+    "src": "Germany",
+    "tgt": "Spain",
+    "layer": 20,
+    "J_vs_fd": 0.003585260594263673,
+    "Q_vs_fd": 0.007448810618370771,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 1.0
+    },
+    "failed_at_h0.05": true
+   },
+   {
+    "func": "language",
+    "src": "Germany",
+    "tgt": "Spain",
+    "layer": 24,
+    "J_vs_fd": 0.018304768949747086,
+    "Q_vs_fd": 0.030274005606770515,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 1.0
+    },
+    "failed_at_h0.05": true
+   },
+   {
+    "func": "language",
+    "src": "Germany",
+    "tgt": "Spain",
+    "layer": 28,
+    "J_vs_fd": 0.008045312017202377,
+    "Q_vs_fd": 0.014839382842183113,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 1.0
+    },
+    "failed_at_h0.05": true
+   },
+   {
+    "func": "language",
+    "src": "Germany",
+    "tgt": "Spain",
+    "layer": 32,
+    "J_vs_fd": 0.004316320642828941,
+    "Q_vs_fd": 0.01018636953085661,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 1.0
+    },
+    "failed_at_h0.05": true
+   },
+   {
+    "func": "continent",
+    "src": "Japan",
+    "tgt": "Canada",
+    "layer": 16,
+    "J_vs_fd": 0.00500138197094202,
+    "Q_vs_fd": 0.014382600784301758,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 1.0
+    },
+    "failed_at_h0.05": true
+   },
+   {
+    "func": "continent",
+    "src": "Japan",
+    "tgt": "Canada",
+    "layer": 20,
+    "J_vs_fd": 0.020465711131691933,
+    "Q_vs_fd": 0.04429403319954872,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 1.0
+    },
+    "failed_at_h0.05": true
+   },
+   {
+    "func": "continent",
+    "src": "Japan",
+    "tgt": "Canada",
+    "layer": 24,
+    "J_vs_fd": 0.16097301244735718,
+    "Q_vs_fd": 0.2560923993587494,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 0.7
+    },
+    "failed_at_h0.05": false
+   },
+   {
+    "func": "continent",
+    "src": "Japan",
+    "tgt": "Canada",
+    "layer": 28,
+    "J_vs_fd": 0.28513288497924805,
+    "Q_vs_fd": 0.47234416007995605,
+    "top10_overlap_halfQ": {
+     "up": 0.9,
+     "down": 0.8
+    },
+    "failed_at_h0.05": false
+   },
+   {
+    "func": "continent",
+    "src": "Japan",
+    "tgt": "Canada",
+    "layer": 32,
+    "J_vs_fd": 0.24631373584270477,
+    "Q_vs_fd": 0.4039821922779083,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 0.8
+    },
+    "failed_at_h0.05": false
+   },
+   {
+    "func": "language",
+    "src": "China",
+    "tgt": "Spain",
+    "layer": 16,
+    "J_vs_fd": 0.007322775200009346,
+    "Q_vs_fd": 0.011536645703017712,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 1.0
+    },
+    "failed_at_h0.05": true
+   },
+   {
+    "func": "language",
+    "src": "China",
+    "tgt": "Spain",
+    "layer": 20,
+    "J_vs_fd": 0.0066766091622412205,
+    "Q_vs_fd": 0.00967981107532978,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 1.0
+    },
+    "failed_at_h0.05": true
+   },
+   {
+    "func": "language",
+    "src": "China",
+    "tgt": "Spain",
+    "layer": 24,
+    "J_vs_fd": 0.023493090644478798,
+    "Q_vs_fd": 0.022415902465581894,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 0.9
+    },
+    "failed_at_h0.05": true
+   },
+   {
+    "func": "language",
+    "src": "China",
+    "tgt": "Spain",
+    "layer": 28,
+    "J_vs_fd": 0.04137689620256424,
+    "Q_vs_fd": 0.041073087602853775,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 0.9
+    },
+    "failed_at_h0.05": false
+   },
+   {
+    "func": "language",
+    "src": "China",
+    "tgt": "Spain",
+    "layer": 32,
+    "J_vs_fd": 0.028485925868153572,
+    "Q_vs_fd": 0.03452640026807785,
+    "top10_overlap_halfQ": {
+     "up": 0.9,
+     "down": 0.9
+    },
+    "failed_at_h0.05": false
+   },
+   {
+    "func": "continent",
+    "src": "Egypt",
+    "tgt": "Japan",
+    "layer": 16,
+    "J_vs_fd": 0.016915524378418922,
+    "Q_vs_fd": 0.03353651985526085,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 0.9
+    },
+    "failed_at_h0.05": true
+   },
+   {
+    "func": "continent",
+    "src": "Egypt",
+    "tgt": "Japan",
+    "layer": 20,
+    "J_vs_fd": 0.03537650778889656,
+    "Q_vs_fd": 0.07440553605556488,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 1.0
+    },
+    "failed_at_h0.05": true
+   },
+   {
+    "func": "continent",
+    "src": "Egypt",
+    "tgt": "Japan",
+    "layer": 24,
+    "J_vs_fd": 0.2650597393512726,
+    "Q_vs_fd": 0.32411953806877136,
+    "top10_overlap_halfQ": {
+     "up": 0.9,
+     "down": 0.9
+    },
+    "failed_at_h0.05": false
+   },
+   {
+    "func": "continent",
+    "src": "Egypt",
+    "tgt": "Japan",
+    "layer": 28,
+    "J_vs_fd": 0.339715838432312,
+    "Q_vs_fd": 0.47517630457878113,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 0.7
+    },
+    "failed_at_h0.05": false
+   },
+   {
+    "func": "continent",
+    "src": "Egypt",
+    "tgt": "Japan",
+    "layer": 32,
+    "J_vs_fd": 0.42058631777763367,
+    "Q_vs_fd": 0.622746467590332,
+    "top10_overlap_halfQ": {
+     "up": 1.0,
+     "down": 0.7
+    },
+    "failed_at_h0.05": false
+   }
+  ]
+ },
+ "note": "Rows with failed_at_h0.05=true are the 12 cases re-checked in the paper (appendix: Q matches to at most 6.1e-2 at h=0.2); the other rows passed at h=0.05 and are included for completeness."
+}
