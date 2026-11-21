@@ -72,7 +72,8 @@ Tests (tiny random Qwen3 models in float64 on CPU, about 25 s): `python -m pytes
 
 `results/` holds the files the paper's numbers and figures are read from: `claims.csv` (one row per number, with
 bootstrap interval and source file), `qj_curves.csv`, `explorable_data/`, `a3_by_context.csv`,
-`d1_family_fits*.jsonl`, `jq_split_{depth,paths}.jsonl`, `fig_inputs/` (the arrays two figure panels read, extracted
+`d1_family_fits*.jsonl`, `jq_split_{depth,paths}.jsonl`, `swap_tokens_rates.json` (the token-readout rates over
+all 147 two-hop swaps, with their intervals), `fig_inputs/` (the arrays two figure panels read, extracted
 from the raw outputs by `paper/fig_inputs.py`), and the generated tables in `results/tables/`. The figures need only
 these:
 
@@ -108,6 +109,7 @@ one subsection per section (A.1 for Section 3 through A.6 for Sections 8-9).
 | 6 Flag, then patch the flagged sites (Fig. 4c-d); App. H | `src/flag_then_patch.py` | `20` | `results/tables/atp_q_results.md` (section Flag-then-patch), `results/tables/figs_atp_q/flag_then_patch.png` |
 | 7.1 Along swaps the bend departs from the baseline (Fig. 5); A.5; App. J split along swap pushes (Table 15) | `src/swap_split.py`, `src/swap_split_summary.py` | `08_swap_split.sh`, `20` | `swap_split_v1/swap_split_s*.json`; `results/tables/swap_split_tables.md` |
 | 7.1 Token readout of a swap (Table 2); A.5 | `src/swap_tokens.py`, `src/swap_tokens_table.py`, `paper/token_table.py` | `11_swap_tokens.sh`, `20` | `swap_tokens_v1/swap_tokens.json`; `results/tables/swap_token_tables_full.md` (raw tokens), `results/tables/token_table.tex` (Table 2) |
+| 7.1 Token readout over all 147 two-hop swaps (rates with 95% intervals; Table 2 caption); A.5 | `src/swap_tokens.py --trials all`, `src/swap_tokens_rates.py` | `11_swap_tokens.sh`, `20` | `swap_tokens_v2/swap_tokens.jsonl`, `swap_tokens_v2_fdcheck/h{0.2,0.5}/` (FD re-check); `results/swap_tokens_rates.json`, `results/tables/swap_token_rates_tables.md` |
 | 7.2 On random and data directions the block terms add in quadrature (Fig. 6); A.5; App. F anatomy by push block (Fig. 8, Tables 11, 12) | `src/q_anatomy.py --stages A2` | `07_anatomy.sh` | `qanat_q38-27b/A2_{a32,b32}.json`, `qanat_qwen3-8b/A2_32.json`; `results/claims.csv` (C4), `results/explorable_data/` |
 | 7.3 Layers bend each other's bends (Fig. 7, third order); A.5; App. G third order by context (Table 13) | `src/q_anatomy.py --stages A3`, `src/curv_circuits.py`, `paper/a3_by_context.py` | `07`, `20` | `qanat_*/A3*.json`, `A3*_raw.pt`; `results/claims.csv` (C5), `results/a3_by_context.csv`, `results/tables/curvature_circuits_tables_{27b,8b}.md` |
 | 9 Limitations: does r mark fragile directions?; A.6 | `src/q_robust.py`, `src/summarize_q_robust.py` | `10_q_robust.sh`, `20` | `q_robust_qwen3-8b/`; `results/tables/q_robust_results.md` |
@@ -130,6 +132,11 @@ request: open an issue. Notes on regenerating:
   depend on which other models one call fits.
 - A few numbers in the text are arithmetic on these files rather than rows of `claims.csv` (for example the
   even-split null shares, and the count of exponential vs power-law fits in `d1_family_fits_v2.jsonl`).
+- The per-case file of the 147-swap token readout (`swap_tokens_v2/swap_tokens.jsonl`, one line per swap and layer,
+  14 MB) is not included: `scripts/11_swap_tokens.sh` regenerates it (one B200, about 25 minutes), and
+  `src/swap_tokens_rates.py` (run by `20_summaries.sh`) turns it into `results/swap_tokens_rates.json` and
+  `results/tables/swap_token_rates_tables.md`. Its FD gate at h = 0.05 fails on 12 small-|Q| cases (exit code 3);
+  the re-check in the same runner passes them at h = 0.2.
 
 ## Hardware
 

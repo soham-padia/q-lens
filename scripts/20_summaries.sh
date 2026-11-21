@@ -1,7 +1,7 @@
 #!/bin/bash
 # CPU only, no model is loaded (compare_scale.py reads model configs from the HF cache). Reads $QLENS_OUT and
 # writes results/ (claims.csv, qj_curves.csv, explorable_data/, a3_by_context.csv, d1_family_fits*.jsonl,
-# jq_split_depth.jsonl, jq_split_paths.jsonl, fig_inputs/) and
+# jq_split_depth.jsonl, jq_split_paths.jsonl, swap_tokens_rates.json, fig_inputs/) and
 # results/tables/*.md. Run after the GPU runners whose outputs you have; scripts skip missing models where they can.
 source "$(dirname "$0")/common.sh"
 T=results/tables; mkdir -p "$T"
@@ -16,6 +16,8 @@ python src/layer_pick.py "$OUT"/layer_pick_v1/t{0,1,2,3,4,5}/S2.json --tag "dens
     --old "$OUT/second_order_v1/s2/t*/S2.json" --md "$T/layer_pick_tables_dense.md" > /dev/null
 python src/swap_split_summary.py "$OUT"/swap_split_v1/swap_split_s*.json --md "$T/swap_split_tables.md" > /dev/null
 python src/swap_tokens_table.py "$OUT/swap_tokens_v1/swap_tokens.json" --md "$T/swap_token_tables_full.md" > /dev/null
+python src/swap_tokens_rates.py "$OUT/swap_tokens_v2/swap_tokens.jsonl" --v1 "$OUT/swap_tokens_v1/swap_tokens.json" \
+    --md "$T/swap_token_rates_tables.md" --json-out results/swap_tokens_rates.json > /dev/null   # 147-swap rates
 python src/summarize_atp_q.py > /dev/null
 python src/flag_then_patch.py > /dev/null      # adds the Flag-then-patch section to atp_q_results.md
 python src/summarize_q_robust.py > /dev/null

@@ -49,11 +49,13 @@ say("| swap | L | J vs FD | Q vs FD | J vs FD (Richardson) | Q vs FD (Richardson
 say("|---|---|---|---|---|---|---|---|---|---|---|---|")
 for t in R["trials"]:
     for l, e in t["layers"].items():
-        g = e["gates"]
-        say(f"| {t['func']} | {l} | {g['J_vs_fd']:.1e} | {g['Q_vs_fd']:.1e} | {g['J_vs_fd_richardson']:.1e} | "
-            f"{g['Q_vs_fd_richardson']:.1e} | {g.get('g1_vs_s2', float('nan')):.1e} | {g.get('g2_vs_s2', float('nan')):.1e} | "
+        g, nan = e["gates"], float("nan")  # FD keys are absent on cases outside the FD subset (swap_tokens --fd-every)
+        ov = e.get("fd_topk_overlap_halfQ") or {"up": nan, "down": nan}
+        say(f"| {t['func']} | {l} | {g.get('J_vs_fd', nan):.1e} | {g.get('Q_vs_fd', nan):.1e} | "
+            f"{g.get('J_vs_fd_richardson', nan):.1e} | "
+            f"{g.get('Q_vs_fd_richardson', nan):.1e} | {g.get('g1_vs_s2', float('nan')):.1e} | {g.get('g2_vs_s2', float('nan')):.1e} | "
             f"{abs(g['r0_vs_s2']):.1e} | {g.get('z0_vs_hf', float('nan')):.1e} | "
-            f"{e['fd_topk_overlap_halfQ']['up']:.1f}/{e['fd_topk_overlap_halfQ']['down']:.1f} | {e['secs']} |")
+            f"{ov['up']:.1f}/{ov['down']:.1f} | {e['secs']} |")
 say()
 say("## Doses, sizes and agreement")
 say("| swap | L | λ* actual | λ* J+Q | λ* J | |J| | |Q/2| | cos(J, Q/2) | cos(pred, actual) at λ* | cos(λ*J, actual) | "
