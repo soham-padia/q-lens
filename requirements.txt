@@ -1,0 +1,17 @@
+# Versions used for the paper (Python 3.11.15). Install the torch build that matches your CUDA
+# (the paper's runs used the CUDA 13.0 build of torch 2.12.1).
+torch==2.12.1
+transformers==5.12.1
+tokenizers==0.22.2
+accelerate==1.14.0
+safetensors==0.8.0
+huggingface_hub==1.21.0
+datasets==5.0.0
+numpy==2.4.6
+scipy==1.17.1
+matplotlib==3.11.0
+pillow==12.3.0
+pytest==9.1.1
+# J-lens (Apache-2.0), at the commit used for the paper. Some stages also read its data/ files, which are not part
+# of the installed package: clone the repository as well (see README, JLENS_DIR).
+jlens @ git+https://github.com/anthropics/jacobian-lens.git@581d398613e5602a5af361e1c34d3a92ea82ba8e

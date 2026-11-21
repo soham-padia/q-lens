@@ -1,0 +1,11 @@
+[project]
+name = "q-lens"
+version = "0.1.0"
+description = "Exact second-order readouts across layers of language models (paper code)"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [{ name = "Soham Padia" }]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

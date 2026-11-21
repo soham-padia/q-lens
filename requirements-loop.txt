@@ -1,0 +1,11 @@
+# Separate environment for the looped models (src/loop_lens.py: Huginn-0125, Ouro-1.4B/2.6B), whose remote code
+# needs transformers 4.55. jlens is used from the clone in $JLENS_DIR (its package metadata asks for transformers>=5.5,
+# so do not pip-install it here).
+torch==2.12.1
+transformers==4.55.4
+tokenizers==0.21.4
+accelerate==1.14.0
+safetensors==0.8.0
+huggingface_hub==0.36.2
+numpy==2.4.6
+scipy==1.17.1

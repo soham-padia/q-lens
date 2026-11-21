@@ -1,0 +1,7 @@
+outputs/
+jacobian-lens/
+__pycache__/
+*.pyc
+*.pt
+logs/
+*.log
