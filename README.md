@@ -168,7 +168,7 @@ as in Sections 3-7.
   `./outputs/`, which git ignores). The results from it in `results/` are numbers and indices only: no text, token
   ids, target tokens, hashes or file names.
 - **Mathlib** (`ML`): [leanprover-community/mathlib4](https://github.com/leanprover-community/mathlib4) at commit
-  `0df444a360eaa60ab8c11dca51a86af692955474`, Apache-2.0 (copyright the Mathlib contributors). `scripts/12_lean.sh`
+  `0df444a360eaa60ab8c11dca51a86af692955474`, Apache-2.0 (copyright the Mathlib contributors; a copy of its licence is in `third_party/mathlib4-LICENSE`). `scripts/12_lean.sh`
   fetches the 600 sampled files. `results/fig_inputs/F8_example.json` (the context of Fig. 8a) and the E4 examples in
   `results/step5/lean_v1/summary.json` and `results/tables/lean_qlens_results.md` quote Mathlib lines under that
   licence.
