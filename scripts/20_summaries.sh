@@ -1,7 +1,7 @@
 #!/bin/bash
 # CPU only, no model is loaded (compare_scale.py reads model configs from the HF cache). Reads $QLENS_OUT and
 # writes results/ (claims.csv, qj_curves.csv, explorable_data/, a3_by_context.csv, d1_family_fits*.jsonl,
-# jq_split_depth.jsonl, jq_split_paths.jsonl, swap_tokens_rates.json, fig_inputs/) and
+# jq_split_depth.jsonl, jq_split_paths.jsonl, swap_tokens_rates.json, fig_inputs/, step5/) and
 # results/tables/*.md. Run after the GPU runners whose outputs you have; scripts skip missing models where they can.
 source "$(dirname "$0")/common.sh"
 T=results/tables; mkdir -p "$T"
@@ -9,8 +9,8 @@ python src/compare_depth.py
 HF_HUB_OFFLINE=1 python src/compare_scale.py > /dev/null
 HF_HUB_OFFLINE=1 python src/compare_scale.py _ctx8 > /dev/null   # 8-context B2x/B4c (binding test numbers)
 python src/summarize_s2.py "$OUT"/second_order_v1/s2/*/S2.json --md "$T/s2_results.md" > /dev/null
-# App. J reading numbers: the Reading section of this table (its one-/two-hop tables are from 3 smoke trials only)
-python src/summarize_s2.py "$OUT"/second_order_v1/s2_smoke_rtx/S2.json --md "$T/s2_reading.md" > /dev/null
+# App. Q reading numbers (part R, rerun after the space-token fix)
+python src/summarize_s2.py "$OUT"/second_order_v1/wsfix/S2.json --md "$T/s2_reading.md" > /dev/null
 python src/layer_pick.py --tag "original 6-point grid" --md "$T/layer_pick_tables_grid6.md" > /dev/null
 python src/layer_pick.py "$OUT"/layer_pick_v1/t{0,1,2,3,4,5}/S2.json --tag "dense grid" \
     --old "$OUT/second_order_v1/s2/t*/S2.json" --md "$T/layer_pick_tables_dense.md" > /dev/null
@@ -37,4 +37,8 @@ python src/jq_split_paths.py > results/jq_split_paths.jsonl            # path of
 python paper/token_table.py "$OUT/swap_tokens_v1/swap_tokens.json" > "$T/token_table.tex"   # Table 2
 python paper/fig_inputs.py > /dev/null                                # results/fig_inputs/ (F2b, F6)
 python paper/a3_by_context.py > /dev/null
+# Step 5: results/tables/lean_qlens_results.md and lean_v1/summary.json, then the numbers-only results/step5/ and
+# results/fig_inputs/F8_example.json that paper/claims_v84.py (called by claims.py) and paper/f8_lines.py read
+python src/summarize_lean_qlens.py > /dev/null
+python paper/step5_inputs.py > /dev/null
 python paper/claims.py

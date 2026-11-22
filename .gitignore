@@ -1,4 +1,6 @@
 outputs/
+riemann-lean/
+claims_step5.csv
 jacobian-lens/
 __pycache__/
 *.pyc

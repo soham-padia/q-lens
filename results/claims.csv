@@ -2706,12 +2706,12 @@ S,Qwen3.8-27B,twohop layer 44,swap push |Delta|/|h| at lambda=1,0.08663,0.073245
 S,Qwen3.8-27B,twohop layer 48,swap push |Delta|/|h| at lambda=1,0.08034,0.06854,0.09705,147,second_order_v1/s2/*/S2.json
 S,Qwen3.8-27B,twohop layer 52,swap push |Delta|/|h| at lambda=1,0.08617,0.07588,0.10865,147,second_order_v1/s2/*/S2.json
 S,Qwen3.8-27B,twohop layer 56,swap push |Delta|/|h| at lambda=1,0.10198,0.08294,0.13071,147,second_order_v1/s2/*/S2.json
-S,Qwen3.8-27B,lens eval multihop,AUC J_d,0.494,nan,nan,93,second_order_v1/B3x_a.json
-S,Qwen3.8-27B,lens eval multihop,AUC J_d+Q/2,0.459,nan,nan,93,second_order_v1/B3x_a.json
-S,Qwen3.8-27B,lens eval multihop,AUC logit,0.586,nan,nan,93,second_order_v1/B3x_a.json
-S,Qwen3.8-27B,lens eval order-ops,AUC J_d,0.714,nan,nan,55,second_order_v1/B3x_a.json
-S,Qwen3.8-27B,lens eval order-ops,AUC J_d+Q/2,0.669,nan,nan,55,second_order_v1/B3x_a.json
-S,Qwen3.8-27B,lens eval order-ops,AUC logit,0.882,nan,nan,55,second_order_v1/B3x_a.json
+S,Qwen3.8-27B,lens eval multihop,AUC J_d,0.436,nan,nan,93,second_order_v1/wsfix/B3x_a_wsfix.json
+S,Qwen3.8-27B,lens eval multihop,AUC J_d+Q/2,0.455,nan,nan,93,second_order_v1/wsfix/B3x_a_wsfix.json
+S,Qwen3.8-27B,lens eval multihop,AUC logit,0.451,nan,nan,93,second_order_v1/wsfix/B3x_a_wsfix.json
+S,Qwen3.8-27B,lens eval order-ops,AUC J_d,0.708,nan,nan,55,second_order_v1/wsfix/B3x_a_wsfix.json
+S,Qwen3.8-27B,lens eval order-ops,AUC J_d+Q/2,0.666,nan,nan,55,second_order_v1/wsfix/B3x_a_wsfix.json
+S,Qwen3.8-27B,lens eval order-ops,AUC logit,0.746,nan,nan,55,second_order_v1/wsfix/B3x_a_wsfix.json
 S,Qwen3.8-27B,lens eval multilingual,AUC J_d,0.567,nan,nan,107,second_order_v1/B3x_b.json
 S,Qwen3.8-27B,lens eval multilingual,AUC J_d+Q/2,0.359,nan,nan,107,second_order_v1/B3x_b.json
 S,Qwen3.8-27B,lens eval multilingual,AUC logit,0.479,nan,nan,107,second_order_v1/B3x_b.json
@@ -3176,3 +3176,903 @@ C2f,OLMo-2-1B main,data k=7 alpha=0.1,gain_J_over_JQ,7.54,0.119,nan,16,results/d
 C2f,OLMo-2-1B main,data k=5 alpha=0.1,gain_J_over_JQ,7.24,0.1128,nan,16,results/d1_family_fits.jsonl
 C2f,OLMo-2-1B main,data k=3 alpha=0.1,gain_J_over_JQ,8,0.0802,nan,16,results/d1_family_fits.jsonl
 C2f,OLMo-2-1B main,data k=1 alpha=0.1,gain_J_over_JQ,8.11,0.0403,nan,16,results/d1_family_fits.jsonl
+L1,Goedel-Prover-V2-8B,E1 RH iso,level,0.43216,0.41019,0.45897,8,lean_v1/summary.json
+L1,Goedel-Prover-V2-8B,E1 RH iso,slope,0.047239,0.044528,0.049997,8,lean_v1/summary.json
+L1,Goedel-Prover-V2-8B,E1 RH iso,within,0.039737,0.036615,0.042591,8,lean_v1/summary.json
+L1,Goedel-Prover-V2-8B,E1 RH iso,power,0.32305,0.30482,0.33859,8,lean_v1/summary.json
+L1,Goedel-Prover-V2-8B,E1 ML iso,level,0.43215,0.4054,0.46067,8,lean_v1/summary.json
+L1,Goedel-Prover-V2-8B,E1 ML iso,slope,0.049738,0.046496,0.053103,8,lean_v1/summary.json
+L1,Goedel-Prover-V2-8B,E1 ML iso,within,0.043867,0.040831,0.047121,8,lean_v1/summary.json
+L1,Goedel-Prover-V2-8B,E1 ML iso,power,0.34734,0.33011,0.36619,8,lean_v1/summary.json
+L1,Goedel-Prover-V2-8B,E1 FW iso,level,0.56163,0.5199,0.5978,8,lean_v1/summary.json
+L1,Goedel-Prover-V2-8B,E1 FW iso,slope,0.052119,0.048413,0.055929,8,lean_v1/summary.json
+L1,Goedel-Prover-V2-8B,E1 FW iso,within,0.045083,0.041394,0.048945,8,lean_v1/summary.json
+L1,Goedel-Prover-V2-8B,E1 FW iso,power,0.36826,0.34619,0.38941,8,lean_v1/summary.json
+L1,Qwen3-8B-Base,E1 RH iso,level,0.60047,0.57548,0.62578,8,lean_v1/summary.json
+L1,Qwen3-8B-Base,E1 RH iso,slope,0.047991,0.04527,0.050833,8,lean_v1/summary.json
+L1,Qwen3-8B-Base,E1 RH iso,within,0.039976,0.03756,0.042521,8,lean_v1/summary.json
+L1,Qwen3-8B-Base,E1 RH iso,power,0.31817,0.3061,0.3319,8,lean_v1/summary.json
+L1,Qwen3-8B-Base,E1 ML iso,level,0.5652,0.54508,0.58822,8,lean_v1/summary.json
+L1,Qwen3-8B-Base,E1 ML iso,slope,0.049281,0.04596,0.052894,8,lean_v1/summary.json
+L1,Qwen3-8B-Base,E1 ML iso,within,0.042779,0.039764,0.045914,8,lean_v1/summary.json
+L1,Qwen3-8B-Base,E1 ML iso,power,0.33082,0.31486,0.348,8,lean_v1/summary.json
+L1,Qwen3-8B-Base,E1 FW iso,level,0.55543,0.51983,0.59288,8,lean_v1/summary.json
+L1,Qwen3-8B-Base,E1 FW iso,slope,0.048585,0.044559,0.052741,8,lean_v1/summary.json
+L1,Qwen3-8B-Base,E1 FW iso,within,0.042498,0.038774,0.04665,8,lean_v1/summary.json
+L1,Qwen3-8B-Base,E1 FW iso,power,0.35192,0.33068,0.37389,8,lean_v1/summary.json
+L1,Qwen3-8B,E1 RH iso,level,0.6579,0.63194,0.68327,8,lean_v1/summary.json
+L1,Qwen3-8B,E1 RH iso,slope,0.055692,0.051801,0.060301,8,lean_v1/summary.json
+L1,Qwen3-8B,E1 RH iso,within,0.044914,0.041061,0.049584,8,lean_v1/summary.json
+L1,Qwen3-8B,E1 RH iso,power,0.34576,0.32395,0.37183,8,lean_v1/summary.json
+L1,Qwen3-8B,E1 ML iso,level,0.63437,0.60278,0.67051,8,lean_v1/summary.json
+L1,Qwen3-8B,E1 ML iso,slope,0.057191,0.053177,0.063335,8,lean_v1/summary.json
+L1,Qwen3-8B,E1 ML iso,within,0.048733,0.045038,0.054426,8,lean_v1/summary.json
+L1,Qwen3-8B,E1 ML iso,power,0.36854,0.34836,0.39961,8,lean_v1/summary.json
+L1,Qwen3-8B,E1 FW iso,level,0.59528,0.55132,0.64511,8,lean_v1/summary.json
+L1,Qwen3-8B,E1 FW iso,slope,0.055942,0.051122,0.062323,8,lean_v1/summary.json
+L1,Qwen3-8B,E1 FW iso,within,0.047111,0.042534,0.053276,8,lean_v1/summary.json
+L1,Qwen3-8B,E1 FW iso,power,0.37248,0.34471,0.40574,8,lean_v1/summary.json
+L1d,lean,E1 diff Goedel-Prover-V2-8B: RH − FW,level,-0.12947,-0.17299,-0.082415,8,lean_v1/summary.json
+L1d,lean,E1 diff Goedel-Prover-V2-8B: RH − FW,slope,-0.0048801,-0.0098445,-0.00063678,8,lean_v1/summary.json
+L1d,lean,E1 diff Goedel-Prover-V2-8B: RH − FW,power,-0.045214,-0.073061,-0.019,8,lean_v1/summary.json
+L1d,lean,E1 diff Goedel-Prover-V2-8B: ML − FW,level,-0.12948,-0.17562,-0.077924,8,lean_v1/summary.json
+L1d,lean,E1 diff Goedel-Prover-V2-8B: ML − FW,slope,-0.0023817,-0.0076253,0.0026215,8,lean_v1/summary.json
+L1d,lean,E1 diff Goedel-Prover-V2-8B: ML − FW,power,-0.02092,-0.049873,0.0097897,8,lean_v1/summary.json
+L1d,lean,E1 diff Goedel-Prover-V2-8B: RH − ML,level,8.3383e-06,-0.034111,0.03438,8,lean_v1/summary.json
+L1d,lean,E1 diff Goedel-Prover-V2-8B: RH − ML,slope,-0.0024985,-0.0070238,0.00089082,8,lean_v1/summary.json
+L1d,lean,E1 diff Goedel-Prover-V2-8B: RH − ML,power,-0.024294,-0.049167,-0.0056656,8,lean_v1/summary.json
+L1d,lean,E1 diff Qwen3-8B-Base: RH − FW,level,0.04504,0.0009207,0.087141,8,lean_v1/summary.json
+L1d,lean,E1 diff Qwen3-8B-Base: RH − FW,slope,-0.00059404,-0.0052469,0.004347,8,lean_v1/summary.json
+L1d,lean,E1 diff Qwen3-8B-Base: RH − FW,power,-0.033755,-0.058356,-0.0069115,8,lean_v1/summary.json
+L1d,lean,E1 diff Qwen3-8B-Base: ML − FW,level,0.0097787,-0.035151,0.054871,8,lean_v1/summary.json
+L1d,lean,E1 diff Qwen3-8B-Base: ML − FW,slope,0.00069672,-0.004538,0.0062642,8,lean_v1/summary.json
+L1d,lean,E1 diff Qwen3-8B-Base: ML − FW,power,-0.0211,-0.04835,0.0075903,8,lean_v1/summary.json
+L1d,lean,E1 diff Qwen3-8B-Base: RH − ML,level,0.035261,0.0057983,0.065916,8,lean_v1/summary.json
+L1d,lean,E1 diff Qwen3-8B-Base: RH − ML,slope,-0.0012908,-0.0057218,0.002906,8,lean_v1/summary.json
+L1d,lean,E1 diff Qwen3-8B-Base: RH − ML,power,-0.012655,-0.034693,0.0088921,8,lean_v1/summary.json
+L1d,lean,E1 diff Qwen3-8B: RH − FW,level,0.062622,0.0064221,0.10705,8,lean_v1/summary.json
+L1d,lean,E1 diff Qwen3-8B: RH − FW,slope,-0.00024995,-0.0080199,0.0064974,8,lean_v1/summary.json
+L1d,lean,E1 diff Qwen3-8B: RH − FW,power,-0.026723,-0.06675,0.0095193,8,lean_v1/summary.json
+L1d,lean,E1 diff Qwen3-8B: ML − FW,level,0.039093,-0.023669,0.096491,8,lean_v1/summary.json
+L1d,lean,E1 diff Qwen3-8B: ML − FW,slope,0.0012492,-0.006885,0.0088587,8,lean_v1/summary.json
+L1d,lean,E1 diff Qwen3-8B: ML − FW,power,-0.0039419,-0.044381,0.036694,8,lean_v1/summary.json
+L1d,lean,E1 diff Qwen3-8B: RH − ML,level,0.02353,-0.018501,0.055876,8,lean_v1/summary.json
+L1d,lean,E1 diff Qwen3-8B: RH − ML,slope,-0.0014992,-0.0084063,0.0033914,8,lean_v1/summary.json
+L1d,lean,E1 diff Qwen3-8B: RH − ML,power,-0.022781,-0.058126,0.003686,8,lean_v1/summary.json
+L1d,lean,E1 diff P − B on RH,level,-0.16831,-0.1905,-0.14468,8,lean_v1/summary.json
+L1d,lean,E1 diff P − B on RH,slope,-0.0007513,-0.0038566,0.0019689,8,lean_v1/summary.json
+L1d,lean,E1 diff P − B on RH,power,0.0048823,-0.015206,0.018703,8,lean_v1/summary.json
+L1d,lean,E1 diff P − C on RH,level,-0.22574,-0.24926,-0.19922,8,lean_v1/summary.json
+L1d,lean,E1 diff P − C on RH,slope,-0.0084529,-0.012744,-0.0045192,8,lean_v1/summary.json
+L1d,lean,E1 diff P − C on RH,power,-0.022711,-0.046665,-0.0020963,8,lean_v1/summary.json
+L1d,lean,E1 diff C − B on RH,level,0.057432,0.038483,0.074659,8,lean_v1/summary.json
+L1d,lean,E1 diff C − B on RH,slope,0.0077016,0.0042417,0.012009,8,lean_v1/summary.json
+L1d,lean,E1 diff C − B on RH,power,0.027594,0.0080307,0.050037,8,lean_v1/summary.json
+L1d,lean,E1 diff P − B on ML,level,-0.13306,-0.15731,-0.10548,8,lean_v1/summary.json
+L1d,lean,E1 diff P − B on ML,slope,0.00045641,-0.0041006,0.0049936,8,lean_v1/summary.json
+L1d,lean,E1 diff P − B on ML,power,0.016521,-0.0079857,0.04042,8,lean_v1/summary.json
+L1d,lean,E1 diff P − C on ML,level,-0.20222,-0.23671,-0.17221,8,lean_v1/summary.json
+L1d,lean,E1 diff P − C on ML,slope,-0.0074536,-0.012813,-0.00317,8,lean_v1/summary.json
+L1d,lean,E1 diff P − C on ML,power,-0.021198,-0.049146,0.0013005,8,lean_v1/summary.json
+L1d,lean,E1 diff C − B on ML,level,0.069164,0.046922,0.096876,8,lean_v1/summary.json
+L1d,lean,E1 diff C − B on ML,slope,0.0079101,0.0042283,0.012914,8,lean_v1/summary.json
+L1d,lean,E1 diff C − B on ML,power,0.037719,0.017701,0.066688,8,lean_v1/summary.json
+L1d,lean,E1 diff P − B on FW,level,0.0062026,-0.015875,0.02718,8,lean_v1/summary.json
+L1d,lean,E1 diff P − B on FW,slope,0.0035348,0.00065042,0.0065231,8,lean_v1/summary.json
+L1d,lean,E1 diff P − B on FW,power,0.016341,-0.0032524,0.038006,8,lean_v1/summary.json
+L1d,lean,E1 diff P − C on FW,level,-0.033647,-0.05623,-0.013875,8,lean_v1/summary.json
+L1d,lean,E1 diff P − C on FW,slope,-0.0038228,-0.0077561,-0.00062943,8,lean_v1/summary.json
+L1d,lean,E1 diff P − C on FW,power,-0.00422,-0.024699,0.015262,8,lean_v1/summary.json
+L1d,lean,E1 diff C − B on FW,level,0.03985,0.017593,0.066224,8,lean_v1/summary.json
+L1d,lean,E1 diff C − B on FW,slope,0.0073576,0.0040034,0.011674,8,lean_v1/summary.json
+L1d,lean,E1 diff C − B on FW,power,0.020561,0.001147,0.045004,8,lean_v1/summary.json
+L1d,lean,E1 diff (P − B) × (RH − FW),level,-0.17451,-0.20462,-0.14386,8,lean_v1/summary.json
+L1d,lean,E1 diff (P − B) × (RH − FW),slope,-0.0042861,-0.0087133,-0.00036873,8,lean_v1/summary.json
+L1d,lean,E1 diff (P − B) × (RH − FW),power,-0.011459,-0.038043,0.012383,8,lean_v1/summary.json
+L1d,lean,E1 diff (P − B) × (ML − FW),level,-0.13926,-0.17131,-0.10834,8,lean_v1/summary.json
+L1d,lean,E1 diff (P − B) × (ML − FW),slope,-0.0030784,-0.0079785,0.001962,8,lean_v1/summary.json
+L1d,lean,E1 diff (P − B) × (ML − FW),power,0.00017943,-0.028343,0.029522,8,lean_v1/summary.json
+L2,Qwen3-8B-Base,E2 ML,D,0.1282,0.086412,0.17561,143,lean_v1/summary.json
+L2,Qwen3-8B-Base,E2 ML,D_cal,0.1201,0.088745,0.14548,143,lean_v1/summary.json
+L2,Qwen3-8B-Base,E2 ML,med_eJ,0.17738,nan,nan,143,lean_v1/summary.json
+L2,Qwen3-8B-Base,E2 ML,med_eJQ,0.049178,nan,nan,143,lean_v1/summary.json
+L2,Qwen3-8B-Base,E2 ML,med_eJcal,0.16928,nan,nan,143,lean_v1/summary.json
+L2,Qwen3-8B-Base,E2 ML,med_eJQcal,0.066261,nan,nan,143,lean_v1/summary.json
+L2,Qwen3-8B-Base,E2 RH,D,0.10519,0.083761,0.13917,242,lean_v1/summary.json
+L2,Qwen3-8B-Base,E2 RH,D_cal,0.1009,0.083509,0.1235,242,lean_v1/summary.json
+L2,Qwen3-8B-Base,E2 RH,med_eJ,0.13785,nan,nan,242,lean_v1/summary.json
+L2,Qwen3-8B-Base,E2 RH,med_eJQ,0.032661,nan,nan,242,lean_v1/summary.json
+L2,Qwen3-8B-Base,E2 RH,med_eJcal,0.13356,nan,nan,242,lean_v1/summary.json
+L2,Qwen3-8B-Base,E2 RH,med_eJQcal,0.037363,nan,nan,242,lean_v1/summary.json
+L2,Goedel-Prover-V2-8B,E2 ML,D,0.28921,0.16739,0.36834,239,lean_v1/summary.json
+L2,Goedel-Prover-V2-8B,E2 ML,D_cal,0.14156,0.087853,0.18297,239,lean_v1/summary.json
+L2,Goedel-Prover-V2-8B,E2 ML,med_eJ,0.46076,nan,nan,239,lean_v1/summary.json
+L2,Goedel-Prover-V2-8B,E2 ML,med_eJQ,0.17156,nan,nan,239,lean_v1/summary.json
+L2,Goedel-Prover-V2-8B,E2 ML,med_eJcal,0.31312,nan,nan,239,lean_v1/summary.json
+L2,Goedel-Prover-V2-8B,E2 ML,med_eJQcal,0.14749,nan,nan,239,lean_v1/summary.json
+L2,Goedel-Prover-V2-8B,E2 RH,D,0.25993,0.18902,0.37263,212,lean_v1/summary.json
+L2,Goedel-Prover-V2-8B,E2 RH,D_cal,0.22462,0.1423,0.3022,212,lean_v1/summary.json
+L2,Goedel-Prover-V2-8B,E2 RH,med_eJ,0.43505,nan,nan,212,lean_v1/summary.json
+L2,Goedel-Prover-V2-8B,E2 RH,med_eJQ,0.17513,nan,nan,212,lean_v1/summary.json
+L2,Goedel-Prover-V2-8B,E2 RH,med_eJcal,0.39974,nan,nan,212,lean_v1/summary.json
+L2,Goedel-Prover-V2-8B,E2 RH,med_eJQcal,0.1832,nan,nan,212,lean_v1/summary.json
+L2,P - B,E2 RH,D(P) - D(B),0.15474,0.077706,0.27007,,lean_v1/summary.json
+L2,P - B,E2 ML,D(P) - D(B),0.16101,0.024029,0.25915,,lean_v1/summary.json
+L3,Qwen3-8B-Base,E3 ML,a_dcos,0.52104,0.45006,0.57334,195,lean_v1/summary.json
+L3,Qwen3-8B-Base,E3 ML,b_rel,0.93863,0.88527,0.96914,195,lean_v1/summary.json
+L3,Qwen3-8B-Base,E3 ML,share,0.094935,0.081823,0.11233,195,lean_v1/summary.json
+L3,Qwen3-8B-Base,E3 RH,a_dcos,0.57086,0.46882,0.63312,189,lean_v1/summary.json
+L3,Qwen3-8B-Base,E3 RH,b_rel,0.89703,0.83421,0.96826,189,lean_v1/summary.json
+L3,Qwen3-8B-Base,E3 RH,share,0.089541,0.076601,0.103,189,lean_v1/summary.json
+L3,Goedel-Prover-V2-8B,E3 ML,a_dcos,0.39248,0.34707,0.46121,195,lean_v1/summary.json
+L3,Goedel-Prover-V2-8B,E3 ML,b_rel,0.97095,0.94066,0.99253,195,lean_v1/summary.json
+L3,Goedel-Prover-V2-8B,E3 ML,share,0.12678,0.10331,0.14657,195,lean_v1/summary.json
+L3,Goedel-Prover-V2-8B,E3 RH,a_dcos,0.42829,0.35807,0.48798,189,lean_v1/summary.json
+L3,Goedel-Prover-V2-8B,E3 RH,b_rel,0.95358,0.91602,0.98491,189,lean_v1/summary.json
+L3,Goedel-Prover-V2-8B,E3 RH,share,0.10791,0.09016,0.12961,189,lean_v1/summary.json
+L3,P - B,E3 RH,dcos,-0.066834,-0.098032,-0.033338,,lean_v1/summary.json
+L3,P - B,E3 RH,dshare,0.016665,0.0097672,0.025093,,lean_v1/summary.json
+L3,P - B,E3 RH,drel,0.046235,0.0025847,0.086216,,lean_v1/summary.json
+L3,P - B,E3 ML,dcos,-0.084241,-0.11848,-0.051648,,lean_v1/summary.json
+L3,P - B,E3 ML,dshare,0.017471,0.010532,0.024754,,lean_v1/summary.json
+L3,P - B,E3 ML,drel,0.043753,0.015779,0.075823,,lean_v1/summary.json
+L4,Goedel-Prover-V2-8B,E4 RH,J1,0.087264,0.054721,0.12052,424,lean_v1/summary.json
+L4,Goedel-Prover-V2-8B,E4 RH,J4,0.12264,0.082938,0.16667,424,lean_v1/summary.json
+L4,Goedel-Prover-V2-8B,E4 RH,hQ1,0.070755,0.041253,0.105,424,lean_v1/summary.json
+L4,Goedel-Prover-V2-8B,E4 RH,hQ4,0.091981,0.058695,0.12883,424,lean_v1/summary.json
+L4,Goedel-Prover-V2-8B,E4 RH,T24,0.11085,0.070776,0.15292,424,lean_v1/summary.json
+L4,Goedel-Prover-V2-8B,E4 RH,d4,-0.03066,-0.068831,0.006823,424,lean_v1/summary.json
+L4,Goedel-Prover-V2-8B,E4 RH,d1,-0.016509,-0.04546,0.010364,424,lean_v1/summary.json
+L4,Goedel-Prover-V2-8B,E4 ML,J1,0.24477,0.19259,0.30399,478,lean_v1/summary.json
+L4,Goedel-Prover-V2-8B,E4 ML,J4,0.30126,0.24364,0.36772,478,lean_v1/summary.json
+L4,Goedel-Prover-V2-8B,E4 ML,hQ1,0.11715,0.082609,0.15598,478,lean_v1/summary.json
+L4,Goedel-Prover-V2-8B,E4 ML,hQ4,0.1841,0.13924,0.23403,478,lean_v1/summary.json
+L4,Goedel-Prover-V2-8B,E4 ML,T24,0.25314,0.19756,0.31591,478,lean_v1/summary.json
+L4,Goedel-Prover-V2-8B,E4 ML,d4,-0.11715,-0.15909,-0.080965,478,lean_v1/summary.json
+L4,Goedel-Prover-V2-8B,E4 ML,d1,-0.12762,-0.17317,-0.088232,478,lean_v1/summary.json
+L4,Qwen3-8B-Base,E4 RH,J1,0,0,0,242,lean_v1/summary.json
+L4,Qwen3-8B-Base,E4 RH,J4,0.0082645,0,0.021739,242,lean_v1/summary.json
+L4,Qwen3-8B-Base,E4 RH,hQ1,0,0,0,242,lean_v1/summary.json
+L4,Qwen3-8B-Base,E4 RH,hQ4,0.0041322,0,0.013336,242,lean_v1/summary.json
+L4,Qwen3-8B-Base,E4 RH,T24,0.0082645,0,0.021739,242,lean_v1/summary.json
+L4,Qwen3-8B-Base,E4 RH,d4,-0.0041322,-0.013393,0,242,lean_v1/summary.json
+L4,Qwen3-8B-Base,E4 RH,d1,0,0,0,242,lean_v1/summary.json
+L4,Qwen3-8B-Base,E4 ML,J1,0.006993,0,0.023265,286,lean_v1/summary.json
+L4,Qwen3-8B-Base,E4 ML,J4,0.017483,0.0032253,0.039683,286,lean_v1/summary.json
+L4,Qwen3-8B-Base,E4 ML,hQ1,0.01049,0,0.025004,286,lean_v1/summary.json
+L4,Qwen3-8B-Base,E4 ML,hQ4,0.024476,0.0032468,0.053965,286,lean_v1/summary.json
+L4,Qwen3-8B-Base,E4 ML,T24,0.024476,0.0037851,0.053195,286,lean_v1/summary.json
+L4,Qwen3-8B-Base,E4 ML,d4,0.006993,-0.0068505,0.026329,286,lean_v1/summary.json
+L4,Qwen3-8B-Base,E4 ML,d1,0.0034965,-0.0075217,0.01627,286,lean_v1/summary.json
+L2p,Goedel-Prover-V2-8B,E2 RH,frac J+Q closer,0.8066,nan,nan,636,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L2p,Goedel-Prover-V2-8B,E2 RH,frac J+Q no root,0.1022,nan,nan,636,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L2p,Goedel-Prover-V2-8B,E2 RH,med r_edit,1.6621,nan,nan,636,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L2p,Goedel-Prover-V2-8B,E2 RH,layers passing,3,nan,nan,3,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L2p,Goedel-Prover-V2-8B,E2 RH L11,med err J,3.1379,nan,nan,212,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L2p,Goedel-Prover-V2-8B,E2 RH L11,med err J+Q,1.1264,nan,nan,212,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L2p,Goedel-Prover-V2-8B,E2 RH L11,med err J cal,1.7551,nan,nan,212,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L2p,Goedel-Prover-V2-8B,E2 RH L11,med r_edit,2.4007,nan,nan,212,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L2p,Goedel-Prover-V2-8B,E2 RH L20,med err J,0.38454,nan,nan,212,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L2p,Goedel-Prover-V2-8B,E2 RH L20,med err J+Q,0.086454,nan,nan,212,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L2p,Goedel-Prover-V2-8B,E2 RH L20,med err J cal,0.29049,nan,nan,212,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L2p,Goedel-Prover-V2-8B,E2 RH L20,med r_edit,1.6524,nan,nan,212,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L2p,Goedel-Prover-V2-8B,E2 RH L29,med err J,0.10744,nan,nan,212,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L2p,Goedel-Prover-V2-8B,E2 RH L29,med err J+Q,0.047461,nan,nan,212,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L2p,Goedel-Prover-V2-8B,E2 RH L29,med err J cal,0.11596,nan,nan,212,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L2p,Goedel-Prover-V2-8B,E2 RH L29,med r_edit,0.91468,nan,nan,212,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L3p,Goedel-Prover-V2-8B,E3 RH,med cos,0.4739,nan,nan,567,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L3p,Goedel-Prover-V2-8B,E3 RH,med cos_mis,0.025351,nan,nan,567,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L3p,Goedel-Prover-V2-8B,E3 RH,med cos_arb,0.00098623,nan,nan,567,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L3p,Goedel-Prover-V2-8B,E3 RH,med rand_cos,0.80632,nan,nan,567,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L3p,Goedel-Prover-V2-8B,E3 RH,med rel,0.95358,nan,nan,567,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L3p,Goedel-Prover-V2-8B,E3 RH,med rand_rel,0.63554,nan,nan,567,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L3p,Goedel-Prover-V2-8B,E3 RH,med cos_s s=0.5,0.76714,nan,nan,567,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L3p,Goedel-Prover-V2-8B,E3 RH,med rel_s s=0.5,0.67838,nan,nan,567,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L3p,Goedel-Prover-V2-8B,E3 RH,med cos_s s=0.1,0.98245,nan,nan,567,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L3p,Goedel-Prover-V2-8B,E3 RH,med rel_s s=0.1,0.19978,nan,nan,567,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L3p,Goedel-Prover-V2-8B,E3 RH L11,med cos,0.16197,nan,nan,189,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L3p,Goedel-Prover-V2-8B,E3 RH L11,med rel,1.0265,nan,nan,189,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L3p,Goedel-Prover-V2-8B,E3 RH L20,med cos,0.51742,nan,nan,189,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L3p,Goedel-Prover-V2-8B,E3 RH L20,med rel,0.949,nan,nan,189,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L3p,Goedel-Prover-V2-8B,E3 RH L29,med cos,0.77136,nan,nan,189,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L3p,Goedel-Prover-V2-8B,E3 RH L29,med rel,0.70456,nan,nan,189,lean_v1/goedel-prover-v2-8b/E23_RH.json
+L2p,Goedel-Prover-V2-8B,E2 ML,frac J+Q closer,0.80335,nan,nan,717,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L2p,Goedel-Prover-V2-8B,E2 ML,frac J+Q no root,0.054393,nan,nan,717,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L2p,Goedel-Prover-V2-8B,E2 ML,med r_edit,1.7607,nan,nan,717,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L2p,Goedel-Prover-V2-8B,E2 ML,layers passing,3,nan,nan,3,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L2p,Goedel-Prover-V2-8B,E2 ML L11,med err J,2.3153,nan,nan,239,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L2p,Goedel-Prover-V2-8B,E2 ML L11,med err J+Q,1.0304,nan,nan,239,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L2p,Goedel-Prover-V2-8B,E2 ML L11,med err J cal,1.1991,nan,nan,239,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L2p,Goedel-Prover-V2-8B,E2 ML L11,med r_edit,2.4708,nan,nan,239,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L2p,Goedel-Prover-V2-8B,E2 ML L20,med err J,0.32022,nan,nan,239,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L2p,Goedel-Prover-V2-8B,E2 ML L20,med err J+Q,0.087057,nan,nan,239,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L2p,Goedel-Prover-V2-8B,E2 ML L20,med err J cal,0.3136,nan,nan,239,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L2p,Goedel-Prover-V2-8B,E2 ML L20,med r_edit,1.6605,nan,nan,239,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L2p,Goedel-Prover-V2-8B,E2 ML L29,med err J,0.081239,nan,nan,239,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L2p,Goedel-Prover-V2-8B,E2 ML L29,med err J+Q,0.029913,nan,nan,239,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L2p,Goedel-Prover-V2-8B,E2 ML L29,med err J cal,0.07907,nan,nan,239,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L2p,Goedel-Prover-V2-8B,E2 ML L29,med r_edit,0.8302,nan,nan,239,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L3p,Goedel-Prover-V2-8B,E3 ML,med cos,0.41634,nan,nan,585,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L3p,Goedel-Prover-V2-8B,E3 ML,med cos_mis,0.011182,nan,nan,585,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L3p,Goedel-Prover-V2-8B,E3 ML,med cos_arb,0.00025145,nan,nan,585,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L3p,Goedel-Prover-V2-8B,E3 ML,med rand_cos,0.76,nan,nan,585,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L3p,Goedel-Prover-V2-8B,E3 ML,med rel,0.97095,nan,nan,585,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L3p,Goedel-Prover-V2-8B,E3 ML,med rand_rel,0.70742,nan,nan,585,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L3p,Goedel-Prover-V2-8B,E3 ML,med cos_s s=0.5,0.74215,nan,nan,585,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L3p,Goedel-Prover-V2-8B,E3 ML,med rel_s s=0.5,0.708,nan,nan,585,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L3p,Goedel-Prover-V2-8B,E3 ML,med cos_s s=0.1,0.98601,nan,nan,585,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L3p,Goedel-Prover-V2-8B,E3 ML,med rel_s s=0.1,0.18247,nan,nan,585,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L3p,Goedel-Prover-V2-8B,E3 ML L11,med cos,0.13994,nan,nan,195,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L3p,Goedel-Prover-V2-8B,E3 ML L11,med rel,1.0048,nan,nan,195,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L3p,Goedel-Prover-V2-8B,E3 ML L20,med cos,0.46244,nan,nan,195,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L3p,Goedel-Prover-V2-8B,E3 ML L20,med rel,0.97671,nan,nan,195,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L3p,Goedel-Prover-V2-8B,E3 ML L29,med cos,0.73623,nan,nan,195,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L3p,Goedel-Prover-V2-8B,E3 ML L29,med rel,0.73508,nan,nan,195,lean_v1/goedel-prover-v2-8b/E23_ML.json
+L2p,Qwen3-8B-Base,E2 RH,frac J+Q closer,0.84435,nan,nan,726,lean_v1/qwen3-8b-base/E23_RH.json
+L2p,Qwen3-8B-Base,E2 RH,frac J+Q no root,0.061983,nan,nan,726,lean_v1/qwen3-8b-base/E23_RH.json
+L2p,Qwen3-8B-Base,E2 RH,med r_edit,0.90961,nan,nan,726,lean_v1/qwen3-8b-base/E23_RH.json
+L2p,Qwen3-8B-Base,E2 RH,layers passing,3,nan,nan,3,lean_v1/qwen3-8b-base/E23_RH.json
+L2p,Qwen3-8B-Base,E2 RH L11,med err J,1.1922,nan,nan,242,lean_v1/qwen3-8b-base/E23_RH.json
+L2p,Qwen3-8B-Base,E2 RH L11,med err J+Q,0.40295,nan,nan,242,lean_v1/qwen3-8b-base/E23_RH.json
+L2p,Qwen3-8B-Base,E2 RH L11,med err J cal,0.7795,nan,nan,242,lean_v1/qwen3-8b-base/E23_RH.json
+L2p,Qwen3-8B-Base,E2 RH L11,med r_edit,2.2935,nan,nan,242,lean_v1/qwen3-8b-base/E23_RH.json
+L2p,Qwen3-8B-Base,E2 RH L20,med err J,0.12386,nan,nan,242,lean_v1/qwen3-8b-base/E23_RH.json
+L2p,Qwen3-8B-Base,E2 RH L20,med err J+Q,0.029318,nan,nan,242,lean_v1/qwen3-8b-base/E23_RH.json
+L2p,Qwen3-8B-Base,E2 RH L20,med err J cal,0.11637,nan,nan,242,lean_v1/qwen3-8b-base/E23_RH.json
+L2p,Qwen3-8B-Base,E2 RH L20,med r_edit,0.90045,nan,nan,242,lean_v1/qwen3-8b-base/E23_RH.json
+L2p,Qwen3-8B-Base,E2 RH L29,med err J,0.038931,nan,nan,242,lean_v1/qwen3-8b-base/E23_RH.json
+L2p,Qwen3-8B-Base,E2 RH L29,med err J+Q,0.0045735,nan,nan,242,lean_v1/qwen3-8b-base/E23_RH.json
+L2p,Qwen3-8B-Base,E2 RH L29,med err J cal,0.038292,nan,nan,242,lean_v1/qwen3-8b-base/E23_RH.json
+L2p,Qwen3-8B-Base,E2 RH L29,med r_edit,0.29628,nan,nan,242,lean_v1/qwen3-8b-base/E23_RH.json
+L3p,Qwen3-8B-Base,E3 RH,med cos,0.58211,nan,nan,567,lean_v1/qwen3-8b-base/E23_RH.json
+L3p,Qwen3-8B-Base,E3 RH,med cos_mis,0.0026815,nan,nan,567,lean_v1/qwen3-8b-base/E23_RH.json
+L3p,Qwen3-8B-Base,E3 RH,med cos_arb,-0.010645,nan,nan,567,lean_v1/qwen3-8b-base/E23_RH.json
+L3p,Qwen3-8B-Base,E3 RH,med rand_cos,0.81283,nan,nan,567,lean_v1/qwen3-8b-base/E23_RH.json
+L3p,Qwen3-8B-Base,E3 RH,med rel,0.89703,nan,nan,567,lean_v1/qwen3-8b-base/E23_RH.json
+L3p,Qwen3-8B-Base,E3 RH,med rand_rel,0.63057,nan,nan,567,lean_v1/qwen3-8b-base/E23_RH.json
+L3p,Qwen3-8B-Base,E3 RH,med cos_s s=0.5,0.81835,nan,nan,567,lean_v1/qwen3-8b-base/E23_RH.json
+L3p,Qwen3-8B-Base,E3 RH,med rel_s s=0.5,0.5923,nan,nan,567,lean_v1/qwen3-8b-base/E23_RH.json
+L3p,Qwen3-8B-Base,E3 RH,med cos_s s=0.1,0.93933,nan,nan,567,lean_v1/qwen3-8b-base/E23_RH.json
+L3p,Qwen3-8B-Base,E3 RH,med rel_s s=0.1,0.35485,nan,nan,567,lean_v1/qwen3-8b-base/E23_RH.json
+L3p,Qwen3-8B-Base,E3 RH L11,med cos,0.18121,nan,nan,189,lean_v1/qwen3-8b-base/E23_RH.json
+L3p,Qwen3-8B-Base,E3 RH L11,med rel,1.0872,nan,nan,189,lean_v1/qwen3-8b-base/E23_RH.json
+L3p,Qwen3-8B-Base,E3 RH L20,med cos,0.63338,nan,nan,189,lean_v1/qwen3-8b-base/E23_RH.json
+L3p,Qwen3-8B-Base,E3 RH L20,med rel,0.85377,nan,nan,189,lean_v1/qwen3-8b-base/E23_RH.json
+L3p,Qwen3-8B-Base,E3 RH L29,med cos,0.85488,nan,nan,189,lean_v1/qwen3-8b-base/E23_RH.json
+L3p,Qwen3-8B-Base,E3 RH L29,med rel,0.54878,nan,nan,189,lean_v1/qwen3-8b-base/E23_RH.json
+L2p,Qwen3-8B-Base,E2 ML,frac J+Q closer,0.79254,nan,nan,429,lean_v1/qwen3-8b-base/E23_ML.json
+L2p,Qwen3-8B-Base,E2 ML,frac J+Q no root,0.074592,nan,nan,429,lean_v1/qwen3-8b-base/E23_ML.json
+L2p,Qwen3-8B-Base,E2 ML,med r_edit,1.1341,nan,nan,429,lean_v1/qwen3-8b-base/E23_ML.json
+L2p,Qwen3-8B-Base,E2 ML,layers passing,3,nan,nan,3,lean_v1/qwen3-8b-base/E23_ML.json
+L2p,Qwen3-8B-Base,E2 ML L11,med err J,1.4658,nan,nan,143,lean_v1/qwen3-8b-base/E23_ML.json
+L2p,Qwen3-8B-Base,E2 ML L11,med err J+Q,0.56362,nan,nan,143,lean_v1/qwen3-8b-base/E23_ML.json
+L2p,Qwen3-8B-Base,E2 ML L11,med err J cal,0.89851,nan,nan,143,lean_v1/qwen3-8b-base/E23_ML.json
+L2p,Qwen3-8B-Base,E2 ML L11,med r_edit,2.5411,nan,nan,143,lean_v1/qwen3-8b-base/E23_ML.json
+L2p,Qwen3-8B-Base,E2 ML L20,med err J,0.16502,nan,nan,143,lean_v1/qwen3-8b-base/E23_ML.json
+L2p,Qwen3-8B-Base,E2 ML L20,med err J+Q,0.038741,nan,nan,143,lean_v1/qwen3-8b-base/E23_ML.json
+L2p,Qwen3-8B-Base,E2 ML L20,med err J cal,0.16511,nan,nan,143,lean_v1/qwen3-8b-base/E23_ML.json
+L2p,Qwen3-8B-Base,E2 ML L20,med r_edit,1.0041,nan,nan,143,lean_v1/qwen3-8b-base/E23_ML.json
+L2p,Qwen3-8B-Base,E2 ML L29,med err J,0.036363,nan,nan,143,lean_v1/qwen3-8b-base/E23_ML.json
+L2p,Qwen3-8B-Base,E2 ML L29,med err J+Q,0.0068968,nan,nan,143,lean_v1/qwen3-8b-base/E23_ML.json
+L2p,Qwen3-8B-Base,E2 ML L29,med err J cal,0.033235,nan,nan,143,lean_v1/qwen3-8b-base/E23_ML.json
+L2p,Qwen3-8B-Base,E2 ML L29,med r_edit,0.36764,nan,nan,143,lean_v1/qwen3-8b-base/E23_ML.json
+L3p,Qwen3-8B-Base,E3 ML,med cos,0.51202,nan,nan,585,lean_v1/qwen3-8b-base/E23_ML.json
+L3p,Qwen3-8B-Base,E3 ML,med cos_mis,0.0058484,nan,nan,585,lean_v1/qwen3-8b-base/E23_ML.json
+L3p,Qwen3-8B-Base,E3 ML,med cos_arb,-0.0020682,nan,nan,585,lean_v1/qwen3-8b-base/E23_ML.json
+L3p,Qwen3-8B-Base,E3 ML,med rand_cos,0.78661,nan,nan,585,lean_v1/qwen3-8b-base/E23_ML.json
+L3p,Qwen3-8B-Base,E3 ML,med rel,0.93863,nan,nan,585,lean_v1/qwen3-8b-base/E23_ML.json
+L3p,Qwen3-8B-Base,E3 ML,med rand_rel,0.68446,nan,nan,585,lean_v1/qwen3-8b-base/E23_ML.json
+L3p,Qwen3-8B-Base,E3 ML,med cos_s s=0.5,0.79455,nan,nan,585,lean_v1/qwen3-8b-base/E23_ML.json
+L3p,Qwen3-8B-Base,E3 ML,med rel_s s=0.5,0.64928,nan,nan,585,lean_v1/qwen3-8b-base/E23_ML.json
+L3p,Qwen3-8B-Base,E3 ML,med cos_s s=0.1,0.9533,nan,nan,585,lean_v1/qwen3-8b-base/E23_ML.json
+L3p,Qwen3-8B-Base,E3 ML,med rel_s s=0.1,0.3142,nan,nan,585,lean_v1/qwen3-8b-base/E23_ML.json
+L3p,Qwen3-8B-Base,E3 ML L11,med cos,0.16766,nan,nan,195,lean_v1/qwen3-8b-base/E23_ML.json
+L3p,Qwen3-8B-Base,E3 ML L11,med rel,1.0279,nan,nan,195,lean_v1/qwen3-8b-base/E23_ML.json
+L3p,Qwen3-8B-Base,E3 ML L20,med cos,0.61067,nan,nan,195,lean_v1/qwen3-8b-base/E23_ML.json
+L3p,Qwen3-8B-Base,E3 ML L20,med rel,0.8783,nan,nan,195,lean_v1/qwen3-8b-base/E23_ML.json
+L3p,Qwen3-8B-Base,E3 ML L29,med cos,0.83452,nan,nan,195,lean_v1/qwen3-8b-base/E23_ML.json
+L3p,Qwen3-8B-Base,E3 ML L29,med rel,0.59586,nan,nan,195,lean_v1/qwen3-8b-base/E23_ML.json
+R,Q,map ML tstar L11,median Spearman,0.14732,0.076699,0.20315,16,resp_v2_ML.json
+R,Q,map ML tstar L11,top pair sign ok,10,nan,nan,16,resp_v2_ML.json
+R,Q,map ML tstar L11,top pair in exact top 3,6,nan,nan,16,resp_v2_ML.json
+R,Q,map ML tstar L11,AND pair found,4,nan,nan,16,resp_v2_ML.json
+R,pQ,map ML tstar L11,median Spearman,0.2836,0.11625,0.44192,16,resp_v2_ML.json
+R,pQ,map ML tstar L11,top pair sign ok,13,nan,nan,16,resp_v2_ML.json
+R,pQ,map ML tstar L11,top pair in exact top 3,3,nan,nan,16,resp_v2_ML.json
+R,pQ,map ML tstar L11,AND pair found,5,nan,nan,16,resp_v2_ML.json
+R,Q3,map ML tstar L11,median Spearman,0.10066,0.031884,0.14311,16,resp_v2_ML.json
+R,Q3,map ML tstar L11,top pair sign ok,12,nan,nan,16,resp_v2_ML.json
+R,Q3,map ML tstar L11,top pair in exact top 3,4,nan,nan,16,resp_v2_ML.json
+R,Q3,map ML tstar L11,AND pair found,5,nan,nan,16,resp_v2_ML.json
+R,Q,map ML tstar L20,median Spearman,0.14517,0.08759,0.2355,16,resp_v2_ML.json
+R,Q,map ML tstar L20,top pair sign ok,14,nan,nan,16,resp_v2_ML.json
+R,Q,map ML tstar L20,top pair in exact top 3,9,nan,nan,16,resp_v2_ML.json
+R,Q,map ML tstar L20,AND pair found,9,nan,nan,16,resp_v2_ML.json
+R,pQ,map ML tstar L20,median Spearman,0.56427,0.44865,0.65815,16,resp_v2_ML.json
+R,pQ,map ML tstar L20,top pair sign ok,15,nan,nan,16,resp_v2_ML.json
+R,pQ,map ML tstar L20,top pair in exact top 3,13,nan,nan,16,resp_v2_ML.json
+R,pQ,map ML tstar L20,AND pair found,11,nan,nan,16,resp_v2_ML.json
+R,Q3,map ML tstar L20,median Spearman,0.18715,0.043983,0.30844,16,resp_v2_ML.json
+R,Q3,map ML tstar L20,top pair sign ok,12,nan,nan,16,resp_v2_ML.json
+R,Q3,map ML tstar L20,top pair in exact top 3,10,nan,nan,16,resp_v2_ML.json
+R,Q3,map ML tstar L20,AND pair found,7,nan,nan,16,resp_v2_ML.json
+R,Q,map ML tstar L29,median Spearman,0.36832,0.19885,0.55629,16,resp_v2_ML.json
+R,Q,map ML tstar L29,top pair sign ok,14,nan,nan,16,resp_v2_ML.json
+R,Q,map ML tstar L29,top pair in exact top 3,10,nan,nan,16,resp_v2_ML.json
+R,Q,map ML tstar L29,AND pair found,11,nan,nan,16,resp_v2_ML.json
+R,pQ,map ML tstar L29,median Spearman,0.92548,0.90257,0.94538,16,resp_v2_ML.json
+R,pQ,map ML tstar L29,top pair sign ok,16,nan,nan,16,resp_v2_ML.json
+R,pQ,map ML tstar L29,top pair in exact top 3,15,nan,nan,16,resp_v2_ML.json
+R,pQ,map ML tstar L29,AND pair found,13,nan,nan,16,resp_v2_ML.json
+R,Q3,map ML tstar L29,median Spearman,0.57057,0.27309,0.66453,16,resp_v2_ML.json
+R,Q3,map ML tstar L29,top pair sign ok,13,nan,nan,16,resp_v2_ML.json
+R,Q3,map ML tstar L29,top pair in exact top 3,7,nan,nan,16,resp_v2_ML.json
+R,Q3,map ML tstar L29,AND pair found,10,nan,nan,16,resp_v2_ML.json
+R,Q,map ML line L11,median Spearman,0.091696,-0.048913,0.14192,16,resp_v2_ML.json
+R,Q,map ML line L11,top pair sign ok,10,nan,nan,16,resp_v2_ML.json
+R,Q,map ML line L11,top pair in exact top 3,5,nan,nan,16,resp_v2_ML.json
+R,Q,map ML line L11,AND pair found,4,nan,nan,16,resp_v2_ML.json
+R,pQ,map ML line L11,median Spearman,0.28888,0.17758,0.44149,16,resp_v2_ML.json
+R,pQ,map ML line L11,top pair sign ok,11,nan,nan,16,resp_v2_ML.json
+R,pQ,map ML line L11,top pair in exact top 3,3,nan,nan,16,resp_v2_ML.json
+R,pQ,map ML line L11,AND pair found,5,nan,nan,16,resp_v2_ML.json
+R,Q3,map ML line L11,median Spearman,0.00067615,-0.089548,0.053175,16,resp_v2_ML.json
+R,Q3,map ML line L11,top pair sign ok,11,nan,nan,16,resp_v2_ML.json
+R,Q3,map ML line L11,top pair in exact top 3,6,nan,nan,16,resp_v2_ML.json
+R,Q3,map ML line L11,AND pair found,2,nan,nan,16,resp_v2_ML.json
+R,Q,map ML line L20,median Spearman,0.16342,0.019324,0.22325,16,resp_v2_ML.json
+R,Q,map ML line L20,top pair sign ok,14,nan,nan,16,resp_v2_ML.json
+R,Q,map ML line L20,top pair in exact top 3,6,nan,nan,16,resp_v2_ML.json
+R,Q,map ML line L20,AND pair found,3,nan,nan,16,resp_v2_ML.json
+R,pQ,map ML line L20,median Spearman,0.47748,0.27525,0.65288,16,resp_v2_ML.json
+R,pQ,map ML line L20,top pair sign ok,15,nan,nan,16,resp_v2_ML.json
+R,pQ,map ML line L20,top pair in exact top 3,15,nan,nan,16,resp_v2_ML.json
+R,pQ,map ML line L20,AND pair found,7,nan,nan,16,resp_v2_ML.json
+R,Q3,map ML line L20,median Spearman,0.13553,0.026255,0.20443,16,resp_v2_ML.json
+R,Q3,map ML line L20,top pair sign ok,11,nan,nan,16,resp_v2_ML.json
+R,Q3,map ML line L20,top pair in exact top 3,7,nan,nan,16,resp_v2_ML.json
+R,Q3,map ML line L20,AND pair found,3,nan,nan,16,resp_v2_ML.json
+R,Q,map ML line L29,median Spearman,0.22851,0.070356,0.44899,16,resp_v2_ML.json
+R,Q,map ML line L29,top pair sign ok,13,nan,nan,16,resp_v2_ML.json
+R,Q,map ML line L29,top pair in exact top 3,8,nan,nan,16,resp_v2_ML.json
+R,Q,map ML line L29,AND pair found,3,nan,nan,16,resp_v2_ML.json
+R,pQ,map ML line L29,median Spearman,0.89405,0.8692,0.93283,16,resp_v2_ML.json
+R,pQ,map ML line L29,top pair sign ok,16,nan,nan,16,resp_v2_ML.json
+R,pQ,map ML line L29,top pair in exact top 3,16,nan,nan,16,resp_v2_ML.json
+R,pQ,map ML line L29,AND pair found,14,nan,nan,16,resp_v2_ML.json
+R,Q3,map ML line L29,median Spearman,0.35487,0.14948,0.49287,16,resp_v2_ML.json
+R,Q3,map ML line L29,top pair sign ok,15,nan,nan,16,resp_v2_ML.json
+R,Q3,map ML line L29,top pair in exact top 3,10,nan,nan,16,resp_v2_ML.json
+R,Q3,map ML line L29,AND pair found,5,nan,nan,16,resp_v2_ML.json
+R,Q,map FW tstar L11,median Spearman,-0.024088,-0.081081,0.073344,16,resp_v2_FW.json
+R,Q,map FW tstar L11,top pair sign ok,8,nan,nan,16,resp_v2_FW.json
+R,Q,map FW tstar L11,top pair in exact top 3,6,nan,nan,16,resp_v2_FW.json
+R,Q,map FW tstar L11,AND pair found,2,nan,nan,16,resp_v2_FW.json
+R,pQ,map FW tstar L11,median Spearman,0.26667,-0.0315,0.39562,16,resp_v2_FW.json
+R,pQ,map FW tstar L11,top pair sign ok,8,nan,nan,16,resp_v2_FW.json
+R,pQ,map FW tstar L11,top pair in exact top 3,8,nan,nan,16,resp_v2_FW.json
+R,pQ,map FW tstar L11,AND pair found,5,nan,nan,16,resp_v2_FW.json
+R,Q3,map FW tstar L11,median Spearman,-0.04372,-0.11357,0.1083,16,resp_v2_FW.json
+R,Q3,map FW tstar L11,top pair sign ok,8,nan,nan,16,resp_v2_FW.json
+R,Q3,map FW tstar L11,top pair in exact top 3,5,nan,nan,16,resp_v2_FW.json
+R,Q3,map FW tstar L11,AND pair found,3,nan,nan,16,resp_v2_FW.json
+R,Q,map FW tstar L20,median Spearman,0.20295,0.015364,0.33041,16,resp_v2_FW.json
+R,Q,map FW tstar L20,top pair sign ok,7,nan,nan,16,resp_v2_FW.json
+R,Q,map FW tstar L20,top pair in exact top 3,4,nan,nan,16,resp_v2_FW.json
+R,Q,map FW tstar L20,AND pair found,9,nan,nan,16,resp_v2_FW.json
+R,pQ,map FW tstar L20,median Spearman,0.75006,0.5351,0.83926,16,resp_v2_FW.json
+R,pQ,map FW tstar L20,top pair sign ok,13,nan,nan,16,resp_v2_FW.json
+R,pQ,map FW tstar L20,top pair in exact top 3,6,nan,nan,16,resp_v2_FW.json
+R,pQ,map FW tstar L20,AND pair found,8,nan,nan,16,resp_v2_FW.json
+R,Q3,map FW tstar L20,median Spearman,0.21187,0.093951,0.34389,16,resp_v2_FW.json
+R,Q3,map FW tstar L20,top pair sign ok,8,nan,nan,16,resp_v2_FW.json
+R,Q3,map FW tstar L20,top pair in exact top 3,6,nan,nan,16,resp_v2_FW.json
+R,Q3,map FW tstar L20,AND pair found,9,nan,nan,16,resp_v2_FW.json
+R,Q,map FW tstar L29,median Spearman,0.5426,0.41817,0.69833,16,resp_v2_FW.json
+R,Q,map FW tstar L29,top pair sign ok,16,nan,nan,16,resp_v2_FW.json
+R,Q,map FW tstar L29,top pair in exact top 3,8,nan,nan,16,resp_v2_FW.json
+R,Q,map FW tstar L29,AND pair found,9,nan,nan,16,resp_v2_FW.json
+R,pQ,map FW tstar L29,median Spearman,0.94383,0.92064,0.96879,16,resp_v2_FW.json
+R,pQ,map FW tstar L29,top pair sign ok,16,nan,nan,16,resp_v2_FW.json
+R,pQ,map FW tstar L29,top pair in exact top 3,15,nan,nan,16,resp_v2_FW.json
+R,pQ,map FW tstar L29,AND pair found,16,nan,nan,16,resp_v2_FW.json
+R,Q3,map FW tstar L29,median Spearman,0.6933,0.52458,0.77439,16,resp_v2_FW.json
+R,Q3,map FW tstar L29,top pair sign ok,15,nan,nan,16,resp_v2_FW.json
+R,Q3,map FW tstar L29,top pair in exact top 3,9,nan,nan,16,resp_v2_FW.json
+R,Q3,map FW tstar L29,AND pair found,11,nan,nan,16,resp_v2_FW.json
+R,Q,map FW line L11,median Spearman,0.10965,0.018314,0.16165,16,resp_v2_FW.json
+R,Q,map FW line L11,top pair sign ok,10,nan,nan,16,resp_v2_FW.json
+R,Q,map FW line L11,top pair in exact top 3,3,nan,nan,16,resp_v2_FW.json
+R,Q,map FW line L11,AND pair found,2,nan,nan,16,resp_v2_FW.json
+R,pQ,map FW line L11,median Spearman,0.18447,0.035026,0.33462,16,resp_v2_FW.json
+R,pQ,map FW line L11,top pair sign ok,13,nan,nan,16,resp_v2_FW.json
+R,pQ,map FW line L11,top pair in exact top 3,7,nan,nan,16,resp_v2_FW.json
+R,pQ,map FW line L11,AND pair found,5,nan,nan,16,resp_v2_FW.json
+R,Q3,map FW line L11,median Spearman,0.10257,0.062055,0.18301,16,resp_v2_FW.json
+R,Q3,map FW line L11,top pair sign ok,9,nan,nan,16,resp_v2_FW.json
+R,Q3,map FW line L11,top pair in exact top 3,4,nan,nan,16,resp_v2_FW.json
+R,Q3,map FW line L11,AND pair found,2,nan,nan,16,resp_v2_FW.json
+R,Q,map FW line L20,median Spearman,0.15678,0.076448,0.24788,16,resp_v2_FW.json
+R,Q,map FW line L20,top pair sign ok,11,nan,nan,16,resp_v2_FW.json
+R,Q,map FW line L20,top pair in exact top 3,5,nan,nan,16,resp_v2_FW.json
+R,Q,map FW line L20,AND pair found,3,nan,nan,16,resp_v2_FW.json
+R,pQ,map FW line L20,median Spearman,0.73745,0.59846,0.84018,16,resp_v2_FW.json
+R,pQ,map FW line L20,top pair sign ok,15,nan,nan,16,resp_v2_FW.json
+R,pQ,map FW line L20,top pair in exact top 3,9,nan,nan,16,resp_v2_FW.json
+R,pQ,map FW line L20,AND pair found,7,nan,nan,16,resp_v2_FW.json
+R,Q3,map FW line L20,median Spearman,0.12368,0.043758,0.32872,16,resp_v2_FW.json
+R,Q3,map FW line L20,top pair sign ok,9,nan,nan,16,resp_v2_FW.json
+R,Q3,map FW line L20,top pair in exact top 3,6,nan,nan,16,resp_v2_FW.json
+R,Q3,map FW line L20,AND pair found,2,nan,nan,16,resp_v2_FW.json
+R,Q,map FW line L29,median Spearman,0.61094,0.38968,0.71483,16,resp_v2_FW.json
+R,Q,map FW line L29,top pair sign ok,14,nan,nan,16,resp_v2_FW.json
+R,Q,map FW line L29,top pair in exact top 3,10,nan,nan,16,resp_v2_FW.json
+R,Q,map FW line L29,AND pair found,10,nan,nan,16,resp_v2_FW.json
+R,pQ,map FW line L29,median Spearman,0.97161,0.93501,0.97735,16,resp_v2_FW.json
+R,pQ,map FW line L29,top pair sign ok,16,nan,nan,16,resp_v2_FW.json
+R,pQ,map FW line L29,top pair in exact top 3,16,nan,nan,16,resp_v2_FW.json
+R,pQ,map FW line L29,AND pair found,16,nan,nan,16,resp_v2_FW.json
+R,Q3,map FW line L29,median Spearman,0.67401,0.49768,0.81853,16,resp_v2_FW.json
+R,Q3,map FW line L29,top pair sign ok,16,nan,nan,16,resp_v2_FW.json
+R,Q3,map FW line L29,top pair in exact top 3,9,nan,nan,16,resp_v2_FW.json
+R,Q3,map FW line L29,AND pair found,12,nan,nan,16,resp_v2_FW.json
+R,Q,map MLnull tstar L11,median Spearman,0.10283,-0.00050964,0.25389,16,resp_v2_MLnull.json
+R,Q,map MLnull tstar L11,top pair sign ok,10,nan,nan,16,resp_v2_MLnull.json
+R,Q,map MLnull tstar L11,top pair in exact top 3,3,nan,nan,16,resp_v2_MLnull.json
+R,Q,map MLnull tstar L11,AND pair found,2,nan,nan,16,resp_v2_MLnull.json
+R,pQ,map MLnull tstar L11,median Spearman,0.29293,0.14939,0.47518,16,resp_v2_MLnull.json
+R,pQ,map MLnull tstar L11,top pair sign ok,11,nan,nan,16,resp_v2_MLnull.json
+R,pQ,map MLnull tstar L11,top pair in exact top 3,2,nan,nan,16,resp_v2_MLnull.json
+R,pQ,map MLnull tstar L11,AND pair found,2,nan,nan,16,resp_v2_MLnull.json
+R,Q3,map MLnull tstar L11,median Spearman,-0.03105,-0.13354,0.10689,16,resp_v2_MLnull.json
+R,Q3,map MLnull tstar L11,top pair sign ok,8,nan,nan,16,resp_v2_MLnull.json
+R,Q3,map MLnull tstar L11,top pair in exact top 3,4,nan,nan,16,resp_v2_MLnull.json
+R,Q3,map MLnull tstar L11,AND pair found,2,nan,nan,16,resp_v2_MLnull.json
+R,Q,map MLnull tstar L20,median Spearman,0.12311,0.078969,0.18319,16,resp_v2_MLnull.json
+R,Q,map MLnull tstar L20,top pair sign ok,10,nan,nan,16,resp_v2_MLnull.json
+R,Q,map MLnull tstar L20,top pair in exact top 3,10,nan,nan,16,resp_v2_MLnull.json
+R,Q,map MLnull tstar L20,AND pair found,9,nan,nan,16,resp_v2_MLnull.json
+R,pQ,map MLnull tstar L20,median Spearman,0.53905,0.43798,0.60105,16,resp_v2_MLnull.json
+R,pQ,map MLnull tstar L20,top pair sign ok,14,nan,nan,16,resp_v2_MLnull.json
+R,pQ,map MLnull tstar L20,top pair in exact top 3,10,nan,nan,16,resp_v2_MLnull.json
+R,pQ,map MLnull tstar L20,AND pair found,9,nan,nan,16,resp_v2_MLnull.json
+R,Q3,map MLnull tstar L20,median Spearman,0.20709,0.084595,0.30664,16,resp_v2_MLnull.json
+R,Q3,map MLnull tstar L20,top pair sign ok,10,nan,nan,16,resp_v2_MLnull.json
+R,Q3,map MLnull tstar L20,top pair in exact top 3,10,nan,nan,16,resp_v2_MLnull.json
+R,Q3,map MLnull tstar L20,AND pair found,7,nan,nan,16,resp_v2_MLnull.json
+R,Q,map MLnull tstar L29,median Spearman,0.31986,0.27974,0.40202,16,resp_v2_MLnull.json
+R,Q,map MLnull tstar L29,top pair sign ok,10,nan,nan,16,resp_v2_MLnull.json
+R,Q,map MLnull tstar L29,top pair in exact top 3,9,nan,nan,16,resp_v2_MLnull.json
+R,Q,map MLnull tstar L29,AND pair found,8,nan,nan,16,resp_v2_MLnull.json
+R,pQ,map MLnull tstar L29,median Spearman,0.92485,0.90183,0.95311,16,resp_v2_MLnull.json
+R,pQ,map MLnull tstar L29,top pair sign ok,16,nan,nan,16,resp_v2_MLnull.json
+R,pQ,map MLnull tstar L29,top pair in exact top 3,16,nan,nan,16,resp_v2_MLnull.json
+R,pQ,map MLnull tstar L29,AND pair found,15,nan,nan,16,resp_v2_MLnull.json
+R,Q3,map MLnull tstar L29,median Spearman,0.49255,0.41672,0.58286,16,resp_v2_MLnull.json
+R,Q3,map MLnull tstar L29,top pair sign ok,13,nan,nan,16,resp_v2_MLnull.json
+R,Q3,map MLnull tstar L29,top pair in exact top 3,11,nan,nan,16,resp_v2_MLnull.json
+R,Q3,map MLnull tstar L29,AND pair found,11,nan,nan,16,resp_v2_MLnull.json
+R,Q,map MLnull line L11,median Spearman,0.055179,-0.044184,0.12224,16,resp_v2_MLnull.json
+R,Q,map MLnull line L11,top pair sign ok,9,nan,nan,16,resp_v2_MLnull.json
+R,Q,map MLnull line L11,top pair in exact top 3,6,nan,nan,16,resp_v2_MLnull.json
+R,Q,map MLnull line L11,AND pair found,3,nan,nan,16,resp_v2_MLnull.json
+R,pQ,map MLnull line L11,median Spearman,0.43102,0.35007,0.47131,16,resp_v2_MLnull.json
+R,pQ,map MLnull line L11,top pair sign ok,8,nan,nan,16,resp_v2_MLnull.json
+R,pQ,map MLnull line L11,top pair in exact top 3,3,nan,nan,16,resp_v2_MLnull.json
+R,pQ,map MLnull line L11,AND pair found,3,nan,nan,16,resp_v2_MLnull.json
+R,Q3,map MLnull line L11,median Spearman,0.03472,-0.069158,0.17683,16,resp_v2_MLnull.json
+R,Q3,map MLnull line L11,top pair sign ok,8,nan,nan,16,resp_v2_MLnull.json
+R,Q3,map MLnull line L11,top pair in exact top 3,7,nan,nan,16,resp_v2_MLnull.json
+R,Q3,map MLnull line L11,AND pair found,3,nan,nan,16,resp_v2_MLnull.json
+R,Q,map MLnull line L20,median Spearman,0.21551,0.090412,0.27901,16,resp_v2_MLnull.json
+R,Q,map MLnull line L20,top pair sign ok,9,nan,nan,16,resp_v2_MLnull.json
+R,Q,map MLnull line L20,top pair in exact top 3,12,nan,nan,16,resp_v2_MLnull.json
+R,Q,map MLnull line L20,AND pair found,7,nan,nan,16,resp_v2_MLnull.json
+R,pQ,map MLnull line L20,median Spearman,0.58625,0.47268,0.71998,16,resp_v2_MLnull.json
+R,pQ,map MLnull line L20,top pair sign ok,15,nan,nan,16,resp_v2_MLnull.json
+R,pQ,map MLnull line L20,top pair in exact top 3,13,nan,nan,16,resp_v2_MLnull.json
+R,pQ,map MLnull line L20,AND pair found,13,nan,nan,16,resp_v2_MLnull.json
+R,Q3,map MLnull line L20,median Spearman,0.16316,0.064607,0.25768,16,resp_v2_MLnull.json
+R,Q3,map MLnull line L20,top pair sign ok,10,nan,nan,16,resp_v2_MLnull.json
+R,Q3,map MLnull line L20,top pair in exact top 3,9,nan,nan,16,resp_v2_MLnull.json
+R,Q3,map MLnull line L20,AND pair found,5,nan,nan,16,resp_v2_MLnull.json
+R,Q,map MLnull line L29,median Spearman,0.084591,0.037157,0.25197,16,resp_v2_MLnull.json
+R,Q,map MLnull line L29,top pair sign ok,8,nan,nan,16,resp_v2_MLnull.json
+R,Q,map MLnull line L29,top pair in exact top 3,4,nan,nan,16,resp_v2_MLnull.json
+R,Q,map MLnull line L29,AND pair found,3,nan,nan,16,resp_v2_MLnull.json
+R,pQ,map MLnull line L29,median Spearman,0.90479,0.85089,0.94337,16,resp_v2_MLnull.json
+R,pQ,map MLnull line L29,top pair sign ok,16,nan,nan,16,resp_v2_MLnull.json
+R,pQ,map MLnull line L29,top pair in exact top 3,13,nan,nan,16,resp_v2_MLnull.json
+R,pQ,map MLnull line L29,AND pair found,12,nan,nan,16,resp_v2_MLnull.json
+R,Q3,map MLnull line L29,median Spearman,0.25409,0.15353,0.35188,16,resp_v2_MLnull.json
+R,Q3,map MLnull line L29,top pair sign ok,11,nan,nan,16,resp_v2_MLnull.json
+R,Q3,map MLnull line L29,top pair in exact top 3,5,nan,nan,16,resp_v2_MLnull.json
+R,Q3,map MLnull line L29,AND pair found,4,nan,nan,16,resp_v2_MLnull.json
+R,Q,map FWnull tstar L11,median Spearman,0.04786,0.016691,0.13755,16,resp_v2_FWnull.json
+R,Q,map FWnull tstar L11,top pair sign ok,6,nan,nan,16,resp_v2_FWnull.json
+R,Q,map FWnull tstar L11,top pair in exact top 3,5,nan,nan,16,resp_v2_FWnull.json
+R,Q,map FWnull tstar L11,AND pair found,4,nan,nan,16,resp_v2_FWnull.json
+R,pQ,map FWnull tstar L11,median Spearman,0.26804,0.17637,0.52376,16,resp_v2_FWnull.json
+R,pQ,map FWnull tstar L11,top pair sign ok,11,nan,nan,16,resp_v2_FWnull.json
+R,pQ,map FWnull tstar L11,top pair in exact top 3,8,nan,nan,16,resp_v2_FWnull.json
+R,pQ,map FWnull tstar L11,AND pair found,4,nan,nan,16,resp_v2_FWnull.json
+R,Q3,map FWnull tstar L11,median Spearman,0.13698,0.042814,0.20022,16,resp_v2_FWnull.json
+R,Q3,map FWnull tstar L11,top pair sign ok,9,nan,nan,16,resp_v2_FWnull.json
+R,Q3,map FWnull tstar L11,top pair in exact top 3,5,nan,nan,16,resp_v2_FWnull.json
+R,Q3,map FWnull tstar L11,AND pair found,5,nan,nan,16,resp_v2_FWnull.json
+R,Q,map FWnull tstar L20,median Spearman,0.2536,0.17961,0.40386,16,resp_v2_FWnull.json
+R,Q,map FWnull tstar L20,top pair sign ok,10,nan,nan,16,resp_v2_FWnull.json
+R,Q,map FWnull tstar L20,top pair in exact top 3,11,nan,nan,16,resp_v2_FWnull.json
+R,Q,map FWnull tstar L20,AND pair found,5,nan,nan,16,resp_v2_FWnull.json
+R,pQ,map FWnull tstar L20,median Spearman,0.79783,0.74867,0.86818,16,resp_v2_FWnull.json
+R,pQ,map FWnull tstar L20,top pair sign ok,16,nan,nan,16,resp_v2_FWnull.json
+R,pQ,map FWnull tstar L20,top pair in exact top 3,9,nan,nan,16,resp_v2_FWnull.json
+R,pQ,map FWnull tstar L20,AND pair found,10,nan,nan,16,resp_v2_FWnull.json
+R,Q3,map FWnull tstar L20,median Spearman,0.35037,0.19093,0.42908,16,resp_v2_FWnull.json
+R,Q3,map FWnull tstar L20,top pair sign ok,10,nan,nan,16,resp_v2_FWnull.json
+R,Q3,map FWnull tstar L20,top pair in exact top 3,11,nan,nan,16,resp_v2_FWnull.json
+R,Q3,map FWnull tstar L20,AND pair found,4,nan,nan,16,resp_v2_FWnull.json
+R,Q,map FWnull tstar L29,median Spearman,0.61263,0.50798,0.72973,16,resp_v2_FWnull.json
+R,Q,map FWnull tstar L29,top pair sign ok,13,nan,nan,16,resp_v2_FWnull.json
+R,Q,map FWnull tstar L29,top pair in exact top 3,12,nan,nan,16,resp_v2_FWnull.json
+R,Q,map FWnull tstar L29,AND pair found,12,nan,nan,16,resp_v2_FWnull.json
+R,pQ,map FWnull tstar L29,median Spearman,0.95058,0.88885,0.96648,16,resp_v2_FWnull.json
+R,pQ,map FWnull tstar L29,top pair sign ok,16,nan,nan,16,resp_v2_FWnull.json
+R,pQ,map FWnull tstar L29,top pair in exact top 3,15,nan,nan,16,resp_v2_FWnull.json
+R,pQ,map FWnull tstar L29,AND pair found,16,nan,nan,16,resp_v2_FWnull.json
+R,Q3,map FWnull tstar L29,median Spearman,0.61043,0.5646,0.79408,16,resp_v2_FWnull.json
+R,Q3,map FWnull tstar L29,top pair sign ok,13,nan,nan,16,resp_v2_FWnull.json
+R,Q3,map FWnull tstar L29,top pair in exact top 3,11,nan,nan,16,resp_v2_FWnull.json
+R,Q3,map FWnull tstar L29,AND pair found,11,nan,nan,16,resp_v2_FWnull.json
+R,Q,map FWnull line L11,median Spearman,0.052397,-0.00055703,0.19723,16,resp_v2_FWnull.json
+R,Q,map FWnull line L11,top pair sign ok,8,nan,nan,16,resp_v2_FWnull.json
+R,Q,map FWnull line L11,top pair in exact top 3,3,nan,nan,16,resp_v2_FWnull.json
+R,Q,map FWnull line L11,AND pair found,3,nan,nan,16,resp_v2_FWnull.json
+R,pQ,map FWnull line L11,median Spearman,0.4711,0.29849,0.52668,16,resp_v2_FWnull.json
+R,pQ,map FWnull line L11,top pair sign ok,14,nan,nan,16,resp_v2_FWnull.json
+R,pQ,map FWnull line L11,top pair in exact top 3,7,nan,nan,16,resp_v2_FWnull.json
+R,pQ,map FWnull line L11,AND pair found,10,nan,nan,16,resp_v2_FWnull.json
+R,Q3,map FWnull line L11,median Spearman,0.1345,0.034333,0.23499,16,resp_v2_FWnull.json
+R,Q3,map FWnull line L11,top pair sign ok,6,nan,nan,16,resp_v2_FWnull.json
+R,Q3,map FWnull line L11,top pair in exact top 3,3,nan,nan,16,resp_v2_FWnull.json
+R,Q3,map FWnull line L11,AND pair found,6,nan,nan,16,resp_v2_FWnull.json
+R,Q,map FWnull line L20,median Spearman,0.17046,0.10928,0.30354,16,resp_v2_FWnull.json
+R,Q,map FWnull line L20,top pair sign ok,8,nan,nan,16,resp_v2_FWnull.json
+R,Q,map FWnull line L20,top pair in exact top 3,4,nan,nan,16,resp_v2_FWnull.json
+R,Q,map FWnull line L20,AND pair found,4,nan,nan,16,resp_v2_FWnull.json
+R,pQ,map FWnull line L20,median Spearman,0.70937,0.62698,0.77486,16,resp_v2_FWnull.json
+R,pQ,map FWnull line L20,top pair sign ok,15,nan,nan,16,resp_v2_FWnull.json
+R,pQ,map FWnull line L20,top pair in exact top 3,10,nan,nan,16,resp_v2_FWnull.json
+R,pQ,map FWnull line L20,AND pair found,9,nan,nan,16,resp_v2_FWnull.json
+R,Q3,map FWnull line L20,median Spearman,0.20931,0.13082,0.27548,16,resp_v2_FWnull.json
+R,Q3,map FWnull line L20,top pair sign ok,9,nan,nan,16,resp_v2_FWnull.json
+R,Q3,map FWnull line L20,top pair in exact top 3,4,nan,nan,16,resp_v2_FWnull.json
+R,Q3,map FWnull line L20,AND pair found,3,nan,nan,16,resp_v2_FWnull.json
+R,Q,map FWnull line L29,median Spearman,0.69886,0.41929,0.77243,16,resp_v2_FWnull.json
+R,Q,map FWnull line L29,top pair sign ok,15,nan,nan,16,resp_v2_FWnull.json
+R,Q,map FWnull line L29,top pair in exact top 3,13,nan,nan,16,resp_v2_FWnull.json
+R,Q,map FWnull line L29,AND pair found,10,nan,nan,16,resp_v2_FWnull.json
+R,pQ,map FWnull line L29,median Spearman,0.95593,0.90372,0.97445,16,resp_v2_FWnull.json
+R,pQ,map FWnull line L29,top pair sign ok,16,nan,nan,16,resp_v2_FWnull.json
+R,pQ,map FWnull line L29,top pair in exact top 3,16,nan,nan,16,resp_v2_FWnull.json
+R,pQ,map FWnull line L29,AND pair found,16,nan,nan,16,resp_v2_FWnull.json
+R,Q3,map FWnull line L29,median Spearman,0.68149,0.46848,0.86043,16,resp_v2_FWnull.json
+R,Q3,map FWnull line L29,top pair sign ok,14,nan,nan,16,resp_v2_FWnull.json
+R,Q3,map FWnull line L29,top pair in exact top 3,12,nan,nan,16,resp_v2_FWnull.json
+R,Q3,map FWnull line L29,AND pair found,9,nan,nan,16,resp_v2_FWnull.json
+R,Q,map RH tstar L11,median Spearman,0.011391,-0.16894,0.13525,16,resp_v2_RH.json
+R,Q,map RH tstar L11,top pair sign ok,9,nan,nan,16,resp_v2_RH.json
+R,Q,map RH tstar L11,top pair in exact top 3,5,nan,nan,16,resp_v2_RH.json
+R,Q,map RH tstar L11,AND pair found,3,nan,nan,16,resp_v2_RH.json
+R,pQ,map RH tstar L11,median Spearman,0.09629,0.067655,0.24012,16,resp_v2_RH.json
+R,pQ,map RH tstar L11,top pair sign ok,8,nan,nan,16,resp_v2_RH.json
+R,pQ,map RH tstar L11,top pair in exact top 3,5,nan,nan,16,resp_v2_RH.json
+R,pQ,map RH tstar L11,AND pair found,4,nan,nan,16,resp_v2_RH.json
+R,Q3,map RH tstar L11,median Spearman,0.018889,-0.059848,0.12137,16,resp_v2_RH.json
+R,Q3,map RH tstar L11,top pair sign ok,6,nan,nan,16,resp_v2_RH.json
+R,Q3,map RH tstar L11,top pair in exact top 3,4,nan,nan,16,resp_v2_RH.json
+R,Q3,map RH tstar L11,AND pair found,2,nan,nan,16,resp_v2_RH.json
+R,Q,map RH tstar L20,median Spearman,0.21627,0.10672,0.30186,16,resp_v2_RH.json
+R,Q,map RH tstar L20,top pair sign ok,13,nan,nan,16,resp_v2_RH.json
+R,Q,map RH tstar L20,top pair in exact top 3,7,nan,nan,16,resp_v2_RH.json
+R,Q,map RH tstar L20,AND pair found,5,nan,nan,16,resp_v2_RH.json
+R,pQ,map RH tstar L20,median Spearman,0.55018,0.44974,0.60401,16,resp_v2_RH.json
+R,pQ,map RH tstar L20,top pair sign ok,16,nan,nan,16,resp_v2_RH.json
+R,pQ,map RH tstar L20,top pair in exact top 3,9,nan,nan,16,resp_v2_RH.json
+R,pQ,map RH tstar L20,AND pair found,11,nan,nan,16,resp_v2_RH.json
+R,Q3,map RH tstar L20,median Spearman,0.21021,0.10564,0.30041,16,resp_v2_RH.json
+R,Q3,map RH tstar L20,top pair sign ok,12,nan,nan,16,resp_v2_RH.json
+R,Q3,map RH tstar L20,top pair in exact top 3,6,nan,nan,16,resp_v2_RH.json
+R,Q3,map RH tstar L20,AND pair found,6,nan,nan,16,resp_v2_RH.json
+R,Q,map RH tstar L29,median Spearman,0.42116,0.34522,0.57549,16,resp_v2_RH.json
+R,Q,map RH tstar L29,top pair sign ok,14,nan,nan,16,resp_v2_RH.json
+R,Q,map RH tstar L29,top pair in exact top 3,9,nan,nan,16,resp_v2_RH.json
+R,Q,map RH tstar L29,AND pair found,11,nan,nan,16,resp_v2_RH.json
+R,pQ,map RH tstar L29,median Spearman,0.95367,0.91188,0.96654,16,resp_v2_RH.json
+R,pQ,map RH tstar L29,top pair sign ok,16,nan,nan,16,resp_v2_RH.json
+R,pQ,map RH tstar L29,top pair in exact top 3,15,nan,nan,16,resp_v2_RH.json
+R,pQ,map RH tstar L29,AND pair found,16,nan,nan,16,resp_v2_RH.json
+R,Q3,map RH tstar L29,median Spearman,0.66551,0.5643,0.72978,16,resp_v2_RH.json
+R,Q3,map RH tstar L29,top pair sign ok,14,nan,nan,16,resp_v2_RH.json
+R,Q3,map RH tstar L29,top pair in exact top 3,11,nan,nan,16,resp_v2_RH.json
+R,Q3,map RH tstar L29,AND pair found,12,nan,nan,16,resp_v2_RH.json
+R,Q,map RH line L11,median Spearman,0.061017,-0.027878,0.13485,16,resp_v2_RH.json
+R,Q,map RH line L11,top pair sign ok,8,nan,nan,16,resp_v2_RH.json
+R,Q,map RH line L11,top pair in exact top 3,4,nan,nan,16,resp_v2_RH.json
+R,Q,map RH line L11,AND pair found,4,nan,nan,16,resp_v2_RH.json
+R,pQ,map RH line L11,median Spearman,0.30426,0.21867,0.33544,16,resp_v2_RH.json
+R,pQ,map RH line L11,top pair sign ok,12,nan,nan,16,resp_v2_RH.json
+R,pQ,map RH line L11,top pair in exact top 3,10,nan,nan,16,resp_v2_RH.json
+R,pQ,map RH line L11,AND pair found,4,nan,nan,16,resp_v2_RH.json
+R,Q3,map RH line L11,median Spearman,0.040632,-0.048074,0.18585,16,resp_v2_RH.json
+R,Q3,map RH line L11,top pair sign ok,10,nan,nan,16,resp_v2_RH.json
+R,Q3,map RH line L11,top pair in exact top 3,3,nan,nan,16,resp_v2_RH.json
+R,Q3,map RH line L11,AND pair found,2,nan,nan,16,resp_v2_RH.json
+R,Q,map RH line L20,median Spearman,0.08068,-0.0018787,0.25732,16,resp_v2_RH.json
+R,Q,map RH line L20,top pair sign ok,9,nan,nan,16,resp_v2_RH.json
+R,Q,map RH line L20,top pair in exact top 3,5,nan,nan,16,resp_v2_RH.json
+R,Q,map RH line L20,AND pair found,3,nan,nan,16,resp_v2_RH.json
+R,pQ,map RH line L20,median Spearman,0.58884,0.49454,0.66545,16,resp_v2_RH.json
+R,pQ,map RH line L20,top pair sign ok,16,nan,nan,16,resp_v2_RH.json
+R,pQ,map RH line L20,top pair in exact top 3,14,nan,nan,16,resp_v2_RH.json
+R,pQ,map RH line L20,AND pair found,6,nan,nan,16,resp_v2_RH.json
+R,Q3,map RH line L20,median Spearman,0.17312,0.11549,0.25137,16,resp_v2_RH.json
+R,Q3,map RH line L20,top pair sign ok,9,nan,nan,16,resp_v2_RH.json
+R,Q3,map RH line L20,top pair in exact top 3,7,nan,nan,16,resp_v2_RH.json
+R,Q3,map RH line L20,AND pair found,4,nan,nan,16,resp_v2_RH.json
+R,Q,map RH line L29,median Spearman,0.19662,0.10888,0.40127,16,resp_v2_RH.json
+R,Q,map RH line L29,top pair sign ok,13,nan,nan,16,resp_v2_RH.json
+R,Q,map RH line L29,top pair in exact top 3,9,nan,nan,16,resp_v2_RH.json
+R,Q,map RH line L29,AND pair found,5,nan,nan,16,resp_v2_RH.json
+R,pQ,map RH line L29,median Spearman,0.93896,0.90353,0.96754,16,resp_v2_RH.json
+R,pQ,map RH line L29,top pair sign ok,16,nan,nan,16,resp_v2_RH.json
+R,pQ,map RH line L29,top pair in exact top 3,16,nan,nan,16,resp_v2_RH.json
+R,pQ,map RH line L29,AND pair found,13,nan,nan,16,resp_v2_RH.json
+R,Q3,map RH line L29,median Spearman,0.36146,0.27747,0.50629,16,resp_v2_RH.json
+R,Q3,map RH line L29,top pair sign ok,13,nan,nan,16,resp_v2_RH.json
+R,Q3,map RH line L29,top pair in exact top 3,8,nan,nan,16,resp_v2_RH.json
+R,Q3,map RH line L29,AND pair found,8,nan,nan,16,resp_v2_RH.json
+Rd,D2,detect ML vs MLnull tstar L11,AUC,0.89453,0.72656,0.99219,16/16,"resp_v2_ML.json, resp_v2_MLnull.json"
+Rd,Q,detect ML vs MLnull tstar L11,AUC,0.80078,0.64062,0.93359,16/16,"resp_v2_ML.json, resp_v2_MLnull.json"
+Rd,pQ,detect ML vs MLnull tstar L11,AUC,0.88672,0.74209,0.98828,16/16,"resp_v2_ML.json, resp_v2_MLnull.json"
+Rd,Q3,detect ML vs MLnull tstar L11,AUC,0.77344,0.58984,0.91406,16/16,"resp_v2_ML.json, resp_v2_MLnull.json"
+Rd,D2,detect ML vs MLnull tstar L20,AUC,0.79297,0.61328,0.94141,16/16,"resp_v2_ML.json, resp_v2_MLnull.json"
+Rd,Q,detect ML vs MLnull tstar L20,AUC,0.80859,0.64844,0.94922,16/16,"resp_v2_ML.json, resp_v2_MLnull.json"
+Rd,pQ,detect ML vs MLnull tstar L20,AUC,0.82031,0.64844,0.95312,16/16,"resp_v2_ML.json, resp_v2_MLnull.json"
+Rd,Q3,detect ML vs MLnull tstar L20,AUC,0.82422,0.66016,0.95312,16/16,"resp_v2_ML.json, resp_v2_MLnull.json"
+Rd,D2,detect ML vs MLnull tstar L29,AUC,0.91797,0.80078,1,16/16,"resp_v2_ML.json, resp_v2_MLnull.json"
+Rd,Q,detect ML vs MLnull tstar L29,AUC,0.70312,0.50781,0.87109,16/16,"resp_v2_ML.json, resp_v2_MLnull.json"
+Rd,pQ,detect ML vs MLnull tstar L29,AUC,0.90625,0.78125,0.99219,16/16,"resp_v2_ML.json, resp_v2_MLnull.json"
+Rd,Q3,detect ML vs MLnull tstar L29,AUC,0.8125,0.64844,0.94531,16/16,"resp_v2_ML.json, resp_v2_MLnull.json"
+Rd,D2,detect ML vs MLnull line L11,AUC,0.79688,0.60547,0.94531,16/16,"resp_v2_ML.json, resp_v2_MLnull.json"
+Rd,Q,detect ML vs MLnull line L11,AUC,0.39844,0.19141,0.59766,16/16,"resp_v2_ML.json, resp_v2_MLnull.json"
+Rd,pQ,detect ML vs MLnull line L11,AUC,0.82031,0.66797,0.94141,16/16,"resp_v2_ML.json, resp_v2_MLnull.json"
+Rd,Q3,detect ML vs MLnull line L11,AUC,0.51562,0.30078,0.71875,16/16,"resp_v2_ML.json, resp_v2_MLnull.json"
+Rd,D2,detect ML vs MLnull line L20,AUC,0.64453,0.44141,0.83984,16/16,"resp_v2_ML.json, resp_v2_MLnull.json"
+Rd,Q,detect ML vs MLnull line L20,AUC,0.43359,0.25,0.62891,16/16,"resp_v2_ML.json, resp_v2_MLnull.json"
+Rd,pQ,detect ML vs MLnull line L20,AUC,0.68359,0.48047,0.85547,16/16,"resp_v2_ML.json, resp_v2_MLnull.json"
+Rd,Q3,detect ML vs MLnull line L20,AUC,0.50781,0.29688,0.72266,16/16,"resp_v2_ML.json, resp_v2_MLnull.json"
+Rd,D2,detect ML vs MLnull line L29,AUC,0.59375,0.37891,0.80859,16/16,"resp_v2_ML.json, resp_v2_MLnull.json"
+Rd,Q,detect ML vs MLnull line L29,AUC,0.55078,0.33203,0.76953,16/16,"resp_v2_ML.json, resp_v2_MLnull.json"
+Rd,pQ,detect ML vs MLnull line L29,AUC,0.64062,0.43359,0.83984,16/16,"resp_v2_ML.json, resp_v2_MLnull.json"
+Rd,Q3,detect ML vs MLnull line L29,AUC,0.49219,0.28115,0.71104,16/16,"resp_v2_ML.json, resp_v2_MLnull.json"
+Rd,D2,detect FW vs FWnull tstar L11,AUC,0.76953,0.59365,0.92188,16/16,"resp_v2_FW.json, resp_v2_FWnull.json"
+Rd,Q,detect FW vs FWnull tstar L11,AUC,0.4375,0.23818,0.64453,16/16,"resp_v2_FW.json, resp_v2_FWnull.json"
+Rd,pQ,detect FW vs FWnull tstar L11,AUC,0.96484,0.89062,1,16/16,"resp_v2_FW.json, resp_v2_FWnull.json"
+Rd,Q3,detect FW vs FWnull tstar L11,AUC,0.40234,0.20312,0.60938,16/16,"resp_v2_FW.json, resp_v2_FWnull.json"
+Rd,D2,detect FW vs FWnull tstar L20,AUC,0.75,0.5585,0.89844,16/16,"resp_v2_FW.json, resp_v2_FWnull.json"
+Rd,Q,detect FW vs FWnull tstar L20,AUC,0.57812,0.34766,0.78516,16/16,"resp_v2_FW.json, resp_v2_FWnull.json"
+Rd,pQ,detect FW vs FWnull tstar L20,AUC,0.90625,0.78516,0.98438,16/16,"resp_v2_FW.json, resp_v2_FWnull.json"
+Rd,Q3,detect FW vs FWnull tstar L20,AUC,0.65234,0.44922,0.83213,16/16,"resp_v2_FW.json, resp_v2_FWnull.json"
+Rd,D2,detect FW vs FWnull tstar L29,AUC,0.90625,0.75781,1,16/16,"resp_v2_FW.json, resp_v2_FWnull.json"
+Rd,Q,detect FW vs FWnull tstar L29,AUC,0.86719,0.70703,0.98047,16/16,"resp_v2_FW.json, resp_v2_FWnull.json"
+Rd,pQ,detect FW vs FWnull tstar L29,AUC,0.88672,0.73438,0.99219,16/16,"resp_v2_FW.json, resp_v2_FWnull.json"
+Rd,Q3,detect FW vs FWnull tstar L29,AUC,0.89453,0.74609,0.98828,16/16,"resp_v2_FW.json, resp_v2_FWnull.json"
+Rd,D2,detect FW vs FWnull line L11,AUC,0.70703,0.52725,0.87891,16/16,"resp_v2_FW.json, resp_v2_FWnull.json"
+Rd,Q,detect FW vs FWnull line L11,AUC,0.54297,0.32031,0.73828,16/16,"resp_v2_FW.json, resp_v2_FWnull.json"
+Rd,pQ,detect FW vs FWnull line L11,AUC,0.92188,0.80078,1,16/16,"resp_v2_FW.json, resp_v2_FWnull.json"
+Rd,Q3,detect FW vs FWnull line L11,AUC,0.56641,0.35156,0.77344,16/16,"resp_v2_FW.json, resp_v2_FWnull.json"
+Rd,D2,detect FW vs FWnull line L20,AUC,0.78516,0.60547,0.93359,16/16,"resp_v2_FW.json, resp_v2_FWnull.json"
+Rd,Q,detect FW vs FWnull line L20,AUC,0.71875,0.53125,0.89453,16/16,"resp_v2_FW.json, resp_v2_FWnull.json"
+Rd,pQ,detect FW vs FWnull line L20,AUC,0.79297,0.625,0.9375,16/16,"resp_v2_FW.json, resp_v2_FWnull.json"
+Rd,Q3,detect FW vs FWnull line L20,AUC,0.76172,0.57021,0.92578,16/16,"resp_v2_FW.json, resp_v2_FWnull.json"
+Rd,D2,detect FW vs FWnull line L29,AUC,0.86328,0.71875,0.97656,16/16,"resp_v2_FW.json, resp_v2_FWnull.json"
+Rd,Q,detect FW vs FWnull line L29,AUC,0.72266,0.52344,0.89844,16/16,"resp_v2_FW.json, resp_v2_FWnull.json"
+Rd,pQ,detect FW vs FWnull line L29,AUC,0.89453,0.75391,0.99609,16/16,"resp_v2_FW.json, resp_v2_FWnull.json"
+Rd,Q3,detect FW vs FWnull line L29,AUC,0.82422,0.65234,0.96094,16/16,"resp_v2_FW.json, resp_v2_FWnull.json"
+Rc,exact,cost ML tstar,median s per context-block,0.97669,nan,nan,48,resp_v2_ML.json
+Rc,Q_jvp,cost ML tstar,median s per context-block,6.9725,nan,nan,48,resp_v2_ML.json
+Rc,pathQ,cost ML tstar,median s per context-block,20.936,nan,nan,48,resp_v2_ML.json
+Rc,Q_hvp,cost ML tstar,median s per context-block,0.51901,nan,nan,48,resp_v2_ML.json
+Rc,Q3_hvp,cost ML tstar,median s per context-block,1.6039,nan,nan,48,resp_v2_ML.json
+Rc,lines,cost ML tstar,median S,11.5,nan,nan,16,resp_v2_ML.json
+Rc,Q_hvp vs Q_jvp,cost ML tstar,max rel diff,1.9657e-05,nan,nan,48,resp_v2_ML.json
+Rc,exact,cost ML line,median s per context-block,1.0987,nan,nan,48,resp_v2_ML.json
+Rc,Q_jvp,cost ML line,median s per context-block,7.6689,nan,nan,48,resp_v2_ML.json
+Rc,pathQ,cost ML line,median s per context-block,23.006,nan,nan,48,resp_v2_ML.json
+Rc,Q_hvp,cost ML line,median s per context-block,0.7418,nan,nan,48,resp_v2_ML.json
+Rc,Q3_hvp,cost ML line,median s per context-block,2.2493,nan,nan,48,resp_v2_ML.json
+Rc,lines,cost ML line,median S,11.5,nan,nan,16,resp_v2_ML.json
+Rc,Q_hvp vs Q_jvp,cost ML line,max rel diff,3.8776e-05,nan,nan,48,resp_v2_ML.json
+Rc,exact,cost FW tstar,median s per context-block,0.64628,nan,nan,48,resp_v2_FW.json
+Rc,Q_jvp,cost FW tstar,median s per context-block,4.5039,nan,nan,48,resp_v2_FW.json
+Rc,pathQ,cost FW tstar,median s per context-block,13.517,nan,nan,48,resp_v2_FW.json
+Rc,Q_hvp,cost FW tstar,median s per context-block,0.41428,nan,nan,48,resp_v2_FW.json
+Rc,Q3_hvp,cost FW tstar,median s per context-block,1.2562,nan,nan,48,resp_v2_FW.json
+Rc,lines,cost FW tstar,median S,9,nan,nan,16,resp_v2_FW.json
+Rc,Q_hvp vs Q_jvp,cost FW tstar,max rel diff,4.1058e-05,nan,nan,48,resp_v2_FW.json
+Rc,exact,cost FW line,median s per context-block,0.72852,nan,nan,48,resp_v2_FW.json
+Rc,Q_jvp,cost FW line,median s per context-block,4.9971,nan,nan,48,resp_v2_FW.json
+Rc,pathQ,cost FW line,median s per context-block,14.993,nan,nan,48,resp_v2_FW.json
+Rc,Q_hvp,cost FW line,median s per context-block,0.60042,nan,nan,48,resp_v2_FW.json
+Rc,Q3_hvp,cost FW line,median s per context-block,1.7968,nan,nan,48,resp_v2_FW.json
+Rc,lines,cost FW line,median S,9,nan,nan,16,resp_v2_FW.json
+Rc,Q_hvp vs Q_jvp,cost FW line,max rel diff,4.3502e-05,nan,nan,48,resp_v2_FW.json
+Rc,exact,cost MLnull tstar,median s per context-block,1.2654,nan,nan,48,resp_v2_MLnull.json
+Rc,Q_jvp,cost MLnull tstar,median s per context-block,9.6885,nan,nan,48,resp_v2_MLnull.json
+Rc,pathQ,cost MLnull tstar,median s per context-block,29.068,nan,nan,48,resp_v2_MLnull.json
+Rc,Q_hvp,cost MLnull tstar,median s per context-block,0.59128,nan,nan,48,resp_v2_MLnull.json
+Rc,Q3_hvp,cost MLnull tstar,median s per context-block,1.8123,nan,nan,48,resp_v2_MLnull.json
+Rc,lines,cost MLnull tstar,median S,13,nan,nan,16,resp_v2_MLnull.json
+Rc,Q_hvp vs Q_jvp,cost MLnull tstar,max rel diff,1.2899e-05,nan,nan,48,resp_v2_MLnull.json
+Rc,exact,cost MLnull line,median s per context-block,1.4405,nan,nan,48,resp_v2_MLnull.json
+Rc,Q_jvp,cost MLnull line,median s per context-block,10.688,nan,nan,48,resp_v2_MLnull.json
+Rc,pathQ,cost MLnull line,median s per context-block,32.064,nan,nan,48,resp_v2_MLnull.json
+Rc,Q_hvp,cost MLnull line,median s per context-block,0.83566,nan,nan,48,resp_v2_MLnull.json
+Rc,Q3_hvp,cost MLnull line,median s per context-block,2.5492,nan,nan,48,resp_v2_MLnull.json
+Rc,lines,cost MLnull line,median S,13,nan,nan,16,resp_v2_MLnull.json
+Rc,Q_hvp vs Q_jvp,cost MLnull line,max rel diff,0.00012052,nan,nan,48,resp_v2_MLnull.json
+Rc,exact,cost FWnull tstar,median s per context-block,1.1675,nan,nan,48,resp_v2_FWnull.json
+Rc,Q_jvp,cost FWnull tstar,median s per context-block,8.5548,nan,nan,48,resp_v2_FWnull.json
+Rc,pathQ,cost FWnull tstar,median s per context-block,25.771,nan,nan,48,resp_v2_FWnull.json
+Rc,Q_hvp,cost FWnull tstar,median s per context-block,0.56282,nan,nan,48,resp_v2_FWnull.json
+Rc,Q3_hvp,cost FWnull tstar,median s per context-block,1.7329,nan,nan,48,resp_v2_FWnull.json
+Rc,lines,cost FWnull tstar,median S,12.5,nan,nan,16,resp_v2_FWnull.json
+Rc,Q_hvp vs Q_jvp,cost FWnull tstar,max rel diff,1.1962e-05,nan,nan,48,resp_v2_FWnull.json
+Rc,exact,cost FWnull line,median s per context-block,1.3181,nan,nan,48,resp_v2_FWnull.json
+Rc,Q_jvp,cost FWnull line,median s per context-block,9.4107,nan,nan,48,resp_v2_FWnull.json
+Rc,pathQ,cost FWnull line,median s per context-block,28.23,nan,nan,48,resp_v2_FWnull.json
+Rc,Q_hvp,cost FWnull line,median s per context-block,0.80084,nan,nan,48,resp_v2_FWnull.json
+Rc,Q3_hvp,cost FWnull line,median s per context-block,2.4423,nan,nan,48,resp_v2_FWnull.json
+Rc,lines,cost FWnull line,median S,12.5,nan,nan,16,resp_v2_FWnull.json
+Rc,Q_hvp vs Q_jvp,cost FWnull line,max rel diff,7.4618e-05,nan,nan,48,resp_v2_FWnull.json
+Rc,exact,cost RH tstar,median s per context-block,0.92614,nan,nan,48,resp_v2_RH.json
+Rc,Q_jvp,cost RH tstar,median s per context-block,6.8123,nan,nan,48,resp_v2_RH.json
+Rc,pathQ,cost RH tstar,median s per context-block,20.441,nan,nan,48,resp_v2_RH.json
+Rc,Q_hvp,cost RH tstar,median s per context-block,0.49682,nan,nan,48,resp_v2_RH.json
+Rc,Q3_hvp,cost RH tstar,median s per context-block,1.526,nan,nan,48,resp_v2_RH.json
+Rc,lines,cost RH tstar,median S,11,nan,nan,16,resp_v2_RH.json
+Rc,Q_hvp vs Q_jvp,cost RH tstar,max rel diff,8.9912e-05,nan,nan,48,resp_v2_RH.json
+Rc,exact,cost RH line,median s per context-block,1.0362,nan,nan,48,resp_v2_RH.json
+Rc,Q_jvp,cost RH line,median s per context-block,7.5037,nan,nan,48,resp_v2_RH.json
+Rc,pathQ,cost RH line,median s per context-block,22.517,nan,nan,48,resp_v2_RH.json
+Rc,Q_hvp,cost RH line,median s per context-block,0.72077,nan,nan,48,resp_v2_RH.json
+Rc,Q3_hvp,cost RH line,median s per context-block,2.1817,nan,nan,48,resp_v2_RH.json
+Rc,lines,cost RH line,median S,11,nan,nan,16,resp_v2_RH.json
+Rc,Q_hvp vs Q_jvp,cost RH line,max rel diff,0.00013693,nan,nan,48,resp_v2_RH.json
+Rn,pairs,"named ML c14 tstar L20 pair [8,10]",count,66,nan,nan,66,resp_v2_ML.json
+Rn,D2,"named ML c14 tstar L20 pair [8,10]",value,0.98666,nan,nan,66,resp_v2_ML.json
+Rn,D2 rank by |D2|,"named ML c14 tstar L20 pair [8,10]",rank,3,nan,nan,66,resp_v2_ML.json
+Rn,Q,"named ML c14 tstar L20 pair [8,10]",value,-0.36298,nan,nan,66,resp_v2_ML.json
+Rn,Q,"named ML c14 tstar L20 pair [8,10]",signed rank,65,nan,nan,66,resp_v2_ML.json
+Rn,pQ,"named ML c14 tstar L20 pair [8,10]",value,0.12269,nan,nan,66,resp_v2_ML.json
+Rn,pQ,"named ML c14 tstar L20 pair [8,10]",signed rank,43,nan,nan,66,resp_v2_ML.json
+Rn,Q3,"named ML c14 tstar L20 pair [8,10]",value,-0.58505,nan,nan,66,resp_v2_ML.json
+Rn,Q3,"named ML c14 tstar L20 pair [8,10]",signed rank,65,nan,nan,66,resp_v2_ML.json
+Rn,pQ point,"named ML c14 tstar L20 pair [8,10]",Q at eta=0.25,-0.24048,nan,nan,66,resp_v2_ML.json
+Rn,pQ point,"named ML c14 tstar L20 pair [8,10]",Q at eta=0.5,1.4468,nan,nan,66,resp_v2_ML.json
+Rn,pQ point,"named ML c14 tstar L20 pair [8,10]",Q at eta=0.75,-0.83822,nan,nan,66,resp_v2_ML.json
+Rn,pairs,"named ML c14 tstar L20 pair [4,10]",count,66,nan,nan,66,resp_v2_ML.json
+Rn,D2,"named ML c14 tstar L20 pair [4,10]",value,-0.25119,nan,nan,66,resp_v2_ML.json
+Rn,D2 rank by |D2|,"named ML c14 tstar L20 pair [4,10]",rank,5,nan,nan,66,resp_v2_ML.json
+Rn,Q,"named ML c14 tstar L20 pair [4,10]",value,-0.004689,nan,nan,66,resp_v2_ML.json
+Rn,Q,"named ML c14 tstar L20 pair [4,10]",signed rank,38,nan,nan,66,resp_v2_ML.json
+Rn,pQ,"named ML c14 tstar L20 pair [4,10]",value,-3.0906,nan,nan,66,resp_v2_ML.json
+Rn,pQ,"named ML c14 tstar L20 pair [4,10]",signed rank,66,nan,nan,66,resp_v2_ML.json
+Rn,Q3,"named ML c14 tstar L20 pair [4,10]",value,0.014752,nan,nan,66,resp_v2_ML.json
+Rn,Q3,"named ML c14 tstar L20 pair [4,10]",signed rank,23,nan,nan,66,resp_v2_ML.json
+Rn,pQ point,"named ML c14 tstar L20 pair [4,10]",Q at eta=0.25,0.0014671,nan,nan,66,resp_v2_ML.json
+Rn,pQ point,"named ML c14 tstar L20 pair [4,10]",Q at eta=0.5,0.29248,nan,nan,66,resp_v2_ML.json
+Rn,pQ point,"named ML c14 tstar L20 pair [4,10]",Q at eta=0.75,-9.5658,nan,nan,66,resp_v2_ML.json
+Rn,pairs,"named FW c4 tstar L20 pair [2,12]",count,78,nan,nan,78,resp_v2_FW.json
+Rn,D2,"named FW c4 tstar L20 pair [2,12]",value,1.9697,nan,nan,78,resp_v2_FW.json
+Rn,D2 rank by |D2|,"named FW c4 tstar L20 pair [2,12]",rank,1,nan,nan,78,resp_v2_FW.json
+Rn,Q,"named FW c4 tstar L20 pair [2,12]",value,-0.48744,nan,nan,78,resp_v2_FW.json
+Rn,Q,"named FW c4 tstar L20 pair [2,12]",signed rank,78,nan,nan,78,resp_v2_FW.json
+Rn,pQ,"named FW c4 tstar L20 pair [2,12]",value,1.7119,nan,nan,78,resp_v2_FW.json
+Rn,pQ,"named FW c4 tstar L20 pair [2,12]",signed rank,14,nan,nan,78,resp_v2_FW.json
+Rn,Q3,"named FW c4 tstar L20 pair [2,12]",value,1.0189,nan,nan,78,resp_v2_FW.json
+Rn,Q3,"named FW c4 tstar L20 pair [2,12]",signed rank,2,nan,nan,78,resp_v2_FW.json
+Rn,pQ point,"named FW c4 tstar L20 pair [2,12]",Q at eta=0.25,1.0464,nan,nan,78,resp_v2_FW.json
+Rn,pQ point,"named FW c4 tstar L20 pair [2,12]",Q at eta=0.5,6.0711,nan,nan,78,resp_v2_FW.json
+Rn,pQ point,"named FW c4 tstar L20 pair [2,12]",Q at eta=0.75,-1.9818,nan,nan,78,resp_v2_FW.json
+FD,float32,fd check ML c0 4 pairs x 3 blocks,min rel err (min over pairs),0.13703,nan,nan,12,"resp_map_v2/fd_precision/fd_{float32,float64}.json"
+FD,float32,fd check ML c0 4 pairs x 3 blocks,min rel err (max over pairs),0.45643,nan,nan,12,"resp_map_v2/fd_precision/fd_{float32,float64}.json"
+FD,float32,fd check ML c0 4 pairs x 3 blocks,argmin step (min),0.03,nan,nan,12,"resp_map_v2/fd_precision/fd_{float32,float64}.json"
+FD,float32,fd check ML c0 4 pairs x 3 blocks,argmin step (max),0.1,nan,nan,12,"resp_map_v2/fd_precision/fd_{float32,float64}.json"
+FD,float32,fd check ML c0 4 pairs x 3 blocks,rel err at s=1e-4 (min),13771,nan,nan,12,"resp_map_v2/fd_precision/fd_{float32,float64}.json"
+FD,float32,fd check ML c0 4 pairs x 3 blocks,rel err at s=1e-4 (max),2.7171e+05,nan,nan,12,"resp_map_v2/fd_precision/fd_{float32,float64}.json"
+FD,float32,fd check ML c0 4 pairs x 3 blocks,best cos (min over pairs),0.94993,nan,nan,12,"resp_map_v2/fd_precision/fd_{float32,float64}.json"
+FD,float32,fd check ML c0 4 pairs x 3 blocks,best cos (max over pairs),0.99375,nan,nan,12,"resp_map_v2/fd_precision/fd_{float32,float64}.json"
+FD,float64,fd check ML c0 4 pairs x 3 blocks,min rel err (min over pairs),0.00022602,nan,nan,12,"resp_map_v2/fd_precision/fd_{float32,float64}.json"
+FD,float64,fd check ML c0 4 pairs x 3 blocks,min rel err (max over pairs),0.00067034,nan,nan,12,"resp_map_v2/fd_precision/fd_{float32,float64}.json"
+FD,float64,fd check ML c0 4 pairs x 3 blocks,argmin step (min),0.0001,nan,nan,12,"resp_map_v2/fd_precision/fd_{float32,float64}.json"
+FD,float64,fd check ML c0 4 pairs x 3 blocks,argmin step (max),0.0003,nan,nan,12,"resp_map_v2/fd_precision/fd_{float32,float64}.json"
+FD,float64,fd check ML c0 4 pairs x 3 blocks,rel err at s=1e-4 (min),0.00022602,nan,nan,12,"resp_map_v2/fd_precision/fd_{float32,float64}.json"
+FD,float64,fd check ML c0 4 pairs x 3 blocks,rel err at s=1e-4 (max),0.0011965,nan,nan,12,"resp_map_v2/fd_precision/fd_{float32,float64}.json"
+FD,float64,fd check ML c0 4 pairs x 3 blocks,best cos (min over pairs),1,nan,nan,12,"resp_map_v2/fd_precision/fd_{float32,float64}.json"
+FD,float64,fd check ML c0 4 pairs x 3 blocks,best cos (max over pairs),1,nan,nan,12,"resp_map_v2/fd_precision/fd_{float32,float64}.json"
+FD,fp32 vs fp64,"Q itself, 12 pair-blocks",rel diff (min),2.8066e-06,nan,nan,12,"Q_float{32,64}.pt"
+FD,fp32 vs fp64,"Q itself, 12 pair-blocks",rel diff (max),1.9254e-05,nan,nan,12,"Q_float{32,64}.pt"
+K,T tokens,cost curve S=12 L20,count,140,nan,nan,66,resp_map_v2/cost_curve/cost_curve.json
+K,exact,cost curve S=12 L20,seconds (measured),1.2072,nan,nan,66,resp_map_v2/cost_curve/cost_curve.json
+K,Q_jvp,cost curve S=12 L20,seconds (extrapolated from 16 pairs),8.8441,nan,nan,66,resp_map_v2/cost_curve/cost_curve.json
+K,pQ,cost curve S=12 L20,seconds (extrapolated from 16 pairs),26.53,nan,nan,66,resp_map_v2/cost_curve/cost_curve.json
+K,Q_hvp,cost curve S=12 L20,seconds (measured),0.74479,nan,nan,66,resp_map_v2/cost_curve/cost_curve.json
+K,Q3,cost curve S=12 L20,seconds (measured),2.2307,nan,nan,66,resp_map_v2/cost_curve/cost_curve.json
+K,exact / Q_hvp,cost curve S=12 L20,ratio,1.6208,nan,nan,66,resp_map_v2/cost_curve/cost_curve.json
+K,pQ / exact,cost curve S=12 L20,ratio,21.977,nan,nan,66,resp_map_v2/cost_curve/cost_curve.json
+K,Q_hvp,cost curve S=12 L20,peak GB,32.74,nan,nan,66,resp_map_v2/cost_curve/cost_curve.json
+K,T tokens,cost curve S=12 L29,count,140,nan,nan,66,resp_map_v2/cost_curve/cost_curve.json
+K,exact,cost curve S=12 L29,seconds (measured),0.49711,nan,nan,66,resp_map_v2/cost_curve/cost_curve.json
+K,Q_jvp,cost curve S=12 L29,seconds (extrapolated from 16 pairs),3.6637,nan,nan,66,resp_map_v2/cost_curve/cost_curve.json
+K,pQ,cost curve S=12 L29,seconds (extrapolated from 16 pairs),10.991,nan,nan,66,resp_map_v2/cost_curve/cost_curve.json
+K,Q_hvp,cost curve S=12 L29,seconds (measured),0.30102,nan,nan,66,resp_map_v2/cost_curve/cost_curve.json
+K,Q3,cost curve S=12 L29,seconds (measured),0.8988,nan,nan,66,resp_map_v2/cost_curve/cost_curve.json
+K,exact / Q_hvp,cost curve S=12 L29,ratio,1.6514,nan,nan,66,resp_map_v2/cost_curve/cost_curve.json
+K,pQ / exact,cost curve S=12 L29,ratio,22.109,nan,nan,66,resp_map_v2/cost_curve/cost_curve.json
+K,Q_hvp,cost curve S=12 L29,peak GB,31.48,nan,nan,66,resp_map_v2/cost_curve/cost_curve.json
+K,T tokens,cost curve S=50 L20,count,532,nan,nan,1225,resp_map_v2/cost_curve/cost_curve.json
+K,exact,cost curve S=50 L20,seconds (measured),75.665,nan,nan,1225,resp_map_v2/cost_curve/cost_curve.json
+K,Q_jvp,cost curve S=50 L20,seconds (extrapolated from 16 pairs),655.59,nan,nan,1225,resp_map_v2/cost_curve/cost_curve.json
+K,pQ,cost curve S=50 L20,seconds (extrapolated from 16 pairs),1966.7,nan,nan,1225,resp_map_v2/cost_curve/cost_curve.json
+K,Q_hvp,cost curve S=50 L20,seconds (measured),7.9928,nan,nan,1225,resp_map_v2/cost_curve/cost_curve.json
+K,Q3,cost curve S=50 L20,seconds (measured),27.323,nan,nan,1225,resp_map_v2/cost_curve/cost_curve.json
+K,exact / Q_hvp,cost curve S=50 L20,ratio,9.4666,nan,nan,1225,resp_map_v2/cost_curve/cost_curve.json
+K,pQ / exact,cost curve S=50 L20,ratio,25.992,nan,nan,1225,resp_map_v2/cost_curve/cost_curve.json
+K,Q_hvp,cost curve S=50 L20,peak GB,40.95,nan,nan,1225,resp_map_v2/cost_curve/cost_curve.json
+K,T tokens,cost curve S=50 L29,count,532,nan,nan,1225,resp_map_v2/cost_curve/cost_curve.json
+K,exact,cost curve S=50 L29,seconds (measured),30.473,nan,nan,1225,resp_map_v2/cost_curve/cost_curve.json
+K,Q_jvp,cost curve S=50 L29,seconds (extrapolated from 16 pairs),264.42,nan,nan,1225,resp_map_v2/cost_curve/cost_curve.json
+K,pQ,cost curve S=50 L29,seconds (extrapolated from 16 pairs),793.22,nan,nan,1225,resp_map_v2/cost_curve/cost_curve.json
+K,Q_hvp,cost curve S=50 L29,seconds (measured),3.1998,nan,nan,1225,resp_map_v2/cost_curve/cost_curve.json
+K,Q3,cost curve S=50 L29,seconds (measured),10.93,nan,nan,1225,resp_map_v2/cost_curve/cost_curve.json
+K,exact / Q_hvp,cost curve S=50 L29,ratio,9.5235,nan,nan,1225,resp_map_v2/cost_curve/cost_curve.json
+K,pQ / exact,cost curve S=50 L29,ratio,26.03,nan,nan,1225,resp_map_v2/cost_curve/cost_curve.json
+K,Q_hvp,cost curve S=50 L29,peak GB,35.09,nan,nan,1225,resp_map_v2/cost_curve/cost_curve.json
+K,T tokens,cost curve S=200 L20,count,2163,nan,nan,19900,resp_map_v2/cost_curve/cost_curve.json
+K,exact,cost curve S=200 L20,seconds (extrapolated),5952.8,nan,nan,19900,resp_map_v2/cost_curve/cost_curve.json
+K,Q_jvp,cost curve S=200 L20,seconds (extrapolated from 16 pairs),55368,nan,nan,19900,resp_map_v2/cost_curve/cost_curve.json
+K,pQ,cost curve S=200 L20,seconds (extrapolated from 16 pairs),1.661e+05,nan,nan,19900,resp_map_v2/cost_curve/cost_curve.json
+K,Q_hvp,cost curve S=200 L20,seconds (OOM),nan,nan,nan,19900,resp_map_v2/cost_curve/cost_curve.json
+K,Q3,cost curve S=200 L20,seconds (OOM),nan,nan,nan,19900,resp_map_v2/cost_curve/cost_curve.json
+K,pQ / exact,cost curve S=200 L20,ratio,27.903,nan,nan,19900,resp_map_v2/cost_curve/cost_curve.json
+K,Q_hvp,cost curve S=200 L20,peak GB,93.24,nan,nan,19900,resp_map_v2/cost_curve/cost_curve.json
+K,T tokens,cost curve S=200 L29,count,2163,nan,nan,19900,resp_map_v2/cost_curve/cost_curve.json
+K,exact,cost curve S=200 L29,seconds (extrapolated),2402.4,nan,nan,19900,resp_map_v2/cost_curve/cost_curve.json
+K,Q_jvp,cost curve S=200 L29,seconds (extrapolated from 16 pairs),22423,nan,nan,19900,resp_map_v2/cost_curve/cost_curve.json
+K,pQ,cost curve S=200 L29,seconds (extrapolated from 16 pairs),67271,nan,nan,19900,resp_map_v2/cost_curve/cost_curve.json
+K,Q_hvp,cost curve S=200 L29,seconds (extrapolated from 50 HVPs),71.573,nan,nan,19900,resp_map_v2/cost_curve/cost_curve.json
+K,Q3,cost curve S=200 L29,seconds (OOM),nan,nan,nan,19900,resp_map_v2/cost_curve/cost_curve.json
+K,exact / Q_hvp,cost curve S=200 L29,ratio,33.565,nan,nan,19900,resp_map_v2/cost_curve/cost_curve.json
+K,pQ / exact,cost curve S=200 L29,ratio,28.002,nan,nan,19900,resp_map_v2/cost_curve/cost_curve.json
+K,Q_hvp,cost curve S=200 L29,peak GB,69.45,nan,nan,19900,resp_map_v2/cost_curve/cost_curve.json
+N,Qwen3.8-27B,order-ops vs prompt digits,gain intermediate,0.70128,nan,nan,49,orderops_layers/ctrl_order-ops.json
+N,Qwen3.8-27B,order-ops vs prompt digits,gain comparison,1.0734,nan,nan,49,orderops_layers/ctrl_order-ops.json
+N,Qwen3.8-27B,order-ops vs prompt digits,difference,-0.37212,-0.97298,0.15343,49,orderops_layers/ctrl_order-ops.json
+N,Qwen3.8-27B,order-ops vs prompt digits,intermediate gains more,24,nan,nan,49,orderops_layers/ctrl_order-ops.json
+N,Qwen3.8-27B,order-ops vs prompt digits,intermediate gains less,25,nan,nan,49,orderops_layers/ctrl_order-ops.json
+N,Qwen3.8-27B,order-ops vs unused digits,gain intermediate,0.64453,nan,nan,55,orderops_layers/ctrl_order-ops.json
+N,Qwen3.8-27B,order-ops vs unused digits,gain comparison,0.23894,nan,nan,55,orderops_layers/ctrl_order-ops.json
+N,Qwen3.8-27B,order-ops vs unused digits,difference,0.40559,0.12212,0.6975,55,orderops_layers/ctrl_order-ops.json
+N,Qwen3.8-27B,order-ops vs unused digits,intermediate gains more,37,nan,nan,55,orderops_layers/ctrl_order-ops.json
+N,Qwen3.8-27B,order-ops vs unused digits,intermediate gains less,18,nan,nan,55,orderops_layers/ctrl_order-ops.json
+N,Qwen3.8-27B,"order-ops vs prompt digits, intermediate not in prompt",gain intermediate,0.5791,nan,nan,38,orderops_layers/ctrl_order-ops.json
+N,Qwen3.8-27B,"order-ops vs prompt digits, intermediate not in prompt",gain comparison,1.1302,nan,nan,38,orderops_layers/ctrl_order-ops.json
+N,Qwen3.8-27B,"order-ops vs prompt digits, intermediate not in prompt",difference,-0.55112,-1.2573,0.11181,38,orderops_layers/ctrl_order-ops.json
+N,Qwen3.8-27B,"order-ops vs prompt digits, intermediate not in prompt",intermediate gains more,17,nan,nan,38,orderops_layers/ctrl_order-ops.json
+N,Qwen3.8-27B,"order-ops vs prompt digits, intermediate not in prompt",intermediate gains less,21,nan,nan,38,orderops_layers/ctrl_order-ops.json
+N,Qwen3.8-27B,order-ops place among ten digits,logit lens,3.0364,nan,nan,55,orderops_layers/ctrl_order-ops.json
+N,Qwen3.8-27B,order-ops place among ten digits,J d,2.9091,nan,nan,55,orderops_layers/ctrl_order-ops.json
+N,Qwen3.8-27B,order-ops place among ten digits,J d + ½Q,2.8364,nan,nan,55,orderops_layers/ctrl_order-ops.json
+N,Qwen3.8-27B,order-ops place among ten digits,"½Q(d,d)",2.9273,nan,nan,55,orderops_layers/ctrl_order-ops.json

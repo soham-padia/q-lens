@@ -191,7 +191,7 @@ def variants(word: str, order_ops: bool = False) -> list[int]:
     for w in words:
         for v in {w, w.lower(), w.capitalize()}:
             for p in ("", " "):
-                e = tok.encode(p + v, add_special_tokens=False)
+                e = [i for i in tok.encode(p + v, add_special_tokens=False) if tok.decode([i]).strip()]  # skip bare-space first token: ' 9' -> ' ', '9'
                 if e:
                     ids.add(e[0])
     return sorted(ids)

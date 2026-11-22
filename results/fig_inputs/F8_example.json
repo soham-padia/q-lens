@@ -1,0 +1,20 @@
+{
+ "corpus": "Mathlib (Apache-2.0)",
+ "context": 6,
+ "file": "Mathlib/Topology/Algebra/Support.lean",
+ "tstar": " intro",
+ "lines": [
+  " hi => (ho i).mem_nhds (Finset.mem_filter.mp hi",
+  ").2\n",
+  "    · have hzn : z ∈ n := by\n",
+  "        rw [inter_assoc] at hz\n",
+  "        exact mem_of_mem_inter_left hz\n",
+  "      replace hz := mem_of_mem_inter_right (mem_of_mem_inter_left",
+  " hz)\n",
+  "      simp only [js, Finset.mem_filter, Finite.mem_toFinset",
+  ", mem_ofPred_eq, mem_iInter,\n",
+  "        and_imp] at hz\n",
+  "      suffices (mulSupport fun i => f i z) ⊆ h",
+  "nf.toFinset by\n"
+ ]
+}

@@ -11,6 +11,8 @@ Writes:
 Added 2026-11-21 (cold-read round 1): per-context spreads (C1s), within-push-block depth fits and r at one block
 (C2), per-case IQR of the cancellation ratio (C4), and the swap numbers from S1/S2 (S: AUCs, baselines, dose errors
 in grid terms). The new bootstraps use their own generator (RNG2), so every earlier row is unchanged.
+Added 2026-11-22 (v8.4): the Lean pilot, the responsibility maps, the FD precision check, the cost curve and the
+numeric-intermediate control, in claims_v84.py with their own generator (RNG3), read from results/step5/.
 Run from anywhere:  QLENS_OUT=<outputs dir> python paper/claims.py
 """
 import csv
@@ -496,7 +498,7 @@ for l in L2:
     ROWS.append(dict(claim="S", model="Qwen3.8-27B", setting=f"twohop layer {l}", quantity="swap push |Delta|/|h| at lambda=1",
                      value=med(bt), lo=float(np.percentile(bt, 25)), hi=float(np.percentile(bt, 75)), n=len(bt), file=f2))
 # B3x: the Q-lens as a readout lens (J-lens readout J d of a state's deviation d, with and without Q(d, d)/2)
-for fn in ("B3x_a", "B3x_b", "B3x_c"):
+for fn in ("wsfix/B3x_a_wsfix", "B3x_b", "B3x_c"):  # B3x_a (multihop, order-ops) rerun 2026-11-22 after the space-token fix
     for setn, v_ in json.loads((S_DIR / f"{fn}.json").read_text())["sets"].items():
         for meth in ("J_d", "J_d+Q/2", "logit"):
             ROWS.append(dict(claim="S", model="Qwen3.8-27B", setting=f"lens eval {setn}", quantity=f"AUC {meth}",
@@ -545,6 +547,11 @@ if FAM.exists():
                 ROWS.append(dict(claim="C2f", model=nm, setting=f"{tn} k={gk['k']} alpha=0.1", quantity="gain_J_over_JQ",
                                  value=gk["gain"], lo=gk["relerr_J"], hi=float("nan"), n=fam["n_layers"],
                                  file="results/d1_family_fits.jsonl"))
+
+# ---------------------------------------------------------------- v8.4: Lean pilot, responsibility maps, FD precision,
+# cost curve, numeric-intermediate control (paper/claims_v84.py; own generator RNG3, after every older row)
+import claims_v84  # noqa: E402
+claims_v84.run(ROWS)
 
 # ---------------------------------------------------------------- write
 with open(P / "claims.csv", "w", newline="") as fh:

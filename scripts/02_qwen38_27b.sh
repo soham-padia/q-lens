@@ -20,12 +20,18 @@ for x in "a multihop,order-ops" "b multilingual,typo" "c poetry,association"; do
   python src/second_order.py --stages B3 --b3-sets "$2" --b3-exact-pos 3 --b3-name "B3x_$1" \
       --b3-layers 24,32,40,44,48,52,56 || exit 1
 done
+# B3x_a again after the space-token fix (a number is matched by its first non-space token), with the reading part
+# R of S2: the paper's multi-hop and order-ops lens numbers (Sec. 6) and the App. Q reading numbers are from this run
+python src/second_order.py --stages B3,S2 --weights-dtype bfloat16 --dtype float32 --b3-sets multihop,order-ops \
+    --b3-exact-pos 3 --b3-layers 24,32,40,44,48,52,56 --b3-name B3x_a_wsfix --s2-parts R --tf32 0 \
+    --out "$SO/wsfix" || exit 1
 # concept swaps: S1 one-hop (needs the J-lens of 01_fit_jlens.sh), S2 two-hop in 8 shards (bf16-stored weights,
 # fp32 compute, TF32 off)
 python src/second_order.py --stages S1 || exit 1
 MIX="--tf32 0 --weights-dtype bfloat16 --dtype float32"
-# reading part R (J-lens rank of the hidden intermediate, all 141 items; App. J) came from this short run, which
-# also ran 3 one-hop and 3 two-hop trials; the full shards below ran only O and T
+# reading part R (J-lens rank of the hidden intermediate, all 141 items) was first run in this short run, which
+# also ran 3 one-hop and 3 two-hop trials (the paper reads part R from $SO/wsfix, above); the full shards below ran
+# only O and T
 python src/second_order.py --stages S2 $MIX --s2-limit 3 --out "$SO/s2_smoke_rtx" || exit 1
 for i in 0 1; do
   python src/second_order.py --stages S2 $MIX --s2-parts O --s2-shard $i/2 --s2-max-min 25 --out "$SO/s2/o$i" || exit 1
