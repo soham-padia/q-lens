@@ -98,24 +98,24 @@ Section numbers are those of the arXiv version; Appendix A ("Full results") give
 
 | paper section | script | runner | output (`$QLENS_OUT/...` unless noted) |
 |---|---|---|---|
-| 3 The Q-lens: exactness, timing; A.1; App. D exactness checks | `src/second_order.py --stages check`, `src/q_anatomy.py --stages check`, `src/loop_lens.py --stages L0` | `02`-`07` | `<run>/check.json`, `loop_*/L0.json` |
-| 4 Near the output (Fig. 2: Taylor error of J and J+Q); A.2 (Table 3); App. E per-depth tables (Tables 7, 8) | `src/second_order.py --stages D1`, `paper/claims.py` (C1) | `02_qwen38_27b.sh`, `03_qwen3_depth.sh`, `20` | `second_order_v1/D1.json`, `so_qwen3-{8b,14b,32b}/D1.json`; `results/claims.csv` (C1), `results/tables/depth_test.md` |
+| 3 The Q-lens: exactness, timing; A.1; App. C exactness checks | `src/second_order.py --stages check`, `src/q_anatomy.py --stages check`, `src/loop_lens.py --stages L0` | `02`-`07` | `<run>/check.json`, `loop_*/L0.json` |
+| 4 Near the output (Fig. 2: Taylor error of J and J+Q); A.2 (Table 3); App. D per-depth table (Table 7) | `src/second_order.py --stages D1`, `paper/claims.py` (C1) | `02_qwen38_27b.sh`, `03_qwen3_depth.sh`, `20` | `second_order_v1/D1.json`, `so_qwen3-{8b,14b,32b}/D1.json`; `results/claims.csv` (C1), `results/tables/depth_test.md` |
 | 5 The bend grows with the blocks traversed (Fig. 3a, four Qwen models); A.3 | `paper/claims.py` (C2 fits) | `20_summaries.sh` | `results/claims.csv` (C2), `results/qj_curves.csv` |
-| 5 Other families (Llama-3.1-8B, OLMo-2-1B checkpoints); A.3; App. E two forms of fit (Table 9) | `src/second_order.py --stages check,vecs,D1`, `src/fit_d1_family.py` | `05_families.sh`, `20` | `so_llama3_1-8b/`, `so_olmo2-1b_ckpt/<rev>/`; `results/d1_family_fits.jsonl` (C2f), `results/d1_family_fits_v2.jsonl` (Table 9) |
-| 5 The bend grows, \|JU\| dips and recovers (Fig. 3b); A.3 path of the two parts of r (Table 4); App. E log slopes of \|JU\| and \|Q\| (Table 10) | `src/jq_split_paths.py`, `src/jq_split_depth.py`, `paper/fig_inputs.py` | `20` | `results/jq_split_paths.jsonl`, `results/jq_split_depth.jsonl`, `results/fig_inputs/F2b_norms.json` |
+| 5 Other families (Llama-3.1-8B, OLMo-2-1B checkpoints); A.3; App. D two forms of fit (Table 8) | `src/second_order.py --stages check,vecs,D1`, `src/fit_d1_family.py` | `05_families.sh`, `20` | `so_llama3_1-8b/`, `so_olmo2-1b_ckpt/<rev>/`; `results/d1_family_fits.jsonl` (C2f), `results/d1_family_fits_v2.jsonl` (Table 8) |
+| 5 The bend grows, \|JU\| dips and recovers (Fig. 3b); A.3 path of the two parts of r (Table 4); App. D log slopes of \|JU\| and \|Q\| (Table 9) | `src/jq_split_paths.py`, `src/jq_split_depth.py`, `paper/fig_inputs.py` | `20` | `results/jq_split_paths.jsonl`, `results/jq_split_depth.jsonl`, `results/fig_inputs/F2b_norms.json` |
 | 5 Looped models bend less (Huginn, Ouro; Fig. 3a); A.3 | `src/loop_lens.py --stages L0,L1a,L1b` | `06_looped.sh` | `loop_{huginn,ouro14,ouro26}/L1a_raw.pt`; `results/claims.csv` |
-| 6 The bend sets the dose (Fig. 4a; one- and two-hop swaps, fine grid of swap layers); A.4 (Table 5); App. I swap protocol; App. Q reading and steering across layers | `src/second_order.py --stages S1,S2`, `src/summarize_s2.py`, `src/layer_pick.py` | `02`, `20` | `second_order_v1/S1.json`, `second_order_v1/s2/*/S2.json`, `layer_pick_v1/t*/S2.json`; `results/claims.csv` (S), `results/tables/s2_results.md`, `s2_reading.md` (App. Q reading, from `second_order_v1/wsfix/S2.json`), `layer_pick_tables_{grid6,dense}.md` |
+| 6 The bend sets the dose (Fig. 4a; one- and two-hop swaps, fine grid of swap layers); A.4 (Table 5); App. H swap protocol; App. P reading and steering across layers | `src/second_order.py --stages S1,S2`, `src/summarize_s2.py`, `src/layer_pick.py` | `02`, `20` | `second_order_v1/S1.json`, `second_order_v1/s2/*/S2.json`, `layer_pick_v1/t*/S2.json`; `results/claims.csv` (S), `results/tables/s2_results.md`, `s2_reading.md` (App. P reading, from `second_order_v1/wsfix/S2.json`), `layer_pick_tables_{grid6,dense}.md` |
 | 6 The bend carries interactions (conjunction test at 8 contexts); A.4 | `src/second_order.py --stages B2x,B4c --b2x-n-ctx 8`, `src/compare_scale.py _ctx8` | `02`, `03`, `20` | `<run>_ctx8/B2x.json`; `results/tables/scale_ladder_ctx8.md` |
 | 6 Q is not a better lens; A.4 | `src/second_order.py --stages B3 --b3-name B3x_*` | `02` | `second_order_v1/B3x_{b,c}.json`, `second_order_v1/wsfix/B3x_a_wsfix.json` (multi-hop and order-ops, after the space-token fix); `results/claims.csv` |
-| 6 Attribution patching (Fig. 4b-d); A.4; App. H (Table 14) | `src/atp_q.py`, `src/summarize_atp_q.py`, `paper/fig_inputs.py` | `09_atp_q.sh`, `20` | `atp_q_qwen3-8b/`; `results/tables/atp_q_results.md`, `results/fig_inputs/F6_atp_q.npz` |
-| 6 Flag, then patch the flagged sites (Fig. 4c-d); App. H | `src/flag_then_patch.py` | `20` | `results/tables/atp_q_results.md` (section Flag-then-patch), `results/tables/figs_atp_q/flag_then_patch.png` |
-| 7.1 Along swaps the bend departs from the baseline (Fig. 5); A.5; App. J split along swap pushes (Table 15) | `src/swap_split.py`, `src/swap_split_summary.py` | `08_swap_split.sh`, `20` | `swap_split_v1/swap_split_s*.json`; `results/tables/swap_split_tables.md` |
+| 6 Attribution patching (Fig. 4b-d); A.4; App. G (Table 11) | `src/atp_q.py`, `src/summarize_atp_q.py`, `paper/fig_inputs.py` | `09_atp_q.sh`, `20` | `atp_q_qwen3-8b/`; `results/tables/atp_q_results.md`, `results/fig_inputs/F6_atp_q.npz` |
+| 6 Flag, then patch the flagged sites (Fig. 4c-d); App. G | `src/flag_then_patch.py` | `20` | `results/tables/atp_q_results.md` (section Flag-then-patch), `results/tables/figs_atp_q/flag_then_patch.png` |
+| 7.1 Along swaps the bend departs from the baseline (Fig. 5); A.5; App. I split along swap pushes (Table 12) | `src/swap_split.py`, `src/swap_split_summary.py` | `08_swap_split.sh`, `20` | `swap_split_v1/swap_split_s*.json`; `results/tables/swap_split_tables.md` |
 | 7.1 Token readout of a swap (Table 2); A.5 | `src/swap_tokens.py`, `src/swap_tokens_table.py`, `paper/token_table.py` | `11_swap_tokens.sh`, `20` | `swap_tokens_v1/swap_tokens.json`; `results/tables/swap_token_tables_full.md` (raw tokens), `results/tables/token_table.tex` (Table 2) |
 | 7.1 Token readout over all 147 two-hop swaps (rates with 95% intervals; Table 2 caption); A.5 | `src/swap_tokens.py --trials all`, `src/swap_tokens_rates.py` | `11_swap_tokens.sh`, `20` | `swap_tokens_v2/swap_tokens.jsonl`, `swap_tokens_v2_fdcheck/h{0.2,0.5}/` (FD re-check); `results/swap_tokens_rates.json`, `results/tables/swap_token_rates_tables.md`, `results/swap_tokens_fdcheck.json` (FD re-check summary) |
-| 7.2 On random and data directions the block terms add in quadrature (Fig. 6); A.5; App. F anatomy by push block (Fig. 9, Tables 11, 12) | `src/q_anatomy.py --stages A2` | `07_anatomy.sh` | `qanat_q38-27b/A2_{a32,b32}.json`, `qanat_qwen3-8b/A2_32.json`; `results/claims.csv` (C4), `results/explorable_data/` |
-| 7.3 Layers bend each other's bends (Fig. 7, third order); A.5; App. G third order by context (Table 13) | `src/q_anatomy.py --stages A3`, `src/curv_circuits.py`, `paper/a3_by_context.py` | `07`, `20` | `qanat_*/A3*.json`, `A3*_raw.pt`; `results/claims.csv` (C5), `results/a3_by_context.csv`, `results/tables/curvature_circuits_tables_{27b,8b}.md` |
+| 7.2 On random and data directions the block terms add in quadrature (Fig. 6); A.5; App. E anatomy by push block (Fig. 9, Table 10) | `src/q_anatomy.py --stages A2` | `07_anatomy.sh` | `qanat_q38-27b/A2_{a32,b32}.json`, `qanat_qwen3-8b/A2_32.json`; `results/claims.csv` (C4), `results/explorable_data/` |
+| 7.3 Layers bend each other's bends (Fig. 7, third order); A.5; App. F third order by context | `src/q_anatomy.py --stages A3`, `src/curv_circuits.py`, `paper/a3_by_context.py` | `07`, `20` | `qanat_*/A3*.json`, `A3*_raw.pt`; `results/claims.csv` (C5), `results/a3_by_context.csv`, `results/tables/curvature_circuits_tables_{27b,8b}.md` |
 | 10 Limitations: does r mark fragile directions?; A.7 | `src/q_robust.py`, `src/summarize_q_robust.py` | `10_q_robust.sh`, `20` | `q_robust_qwen3-8b/`; `results/tables/q_robust_results.md` |
-| A.1 timings; App. C setup (Table 6); App. D checks on the 122B mixture of experts and the Qwen3.5 ladder | `src/second_order.py`, `src/tiny_moe.py`, `src/compare_scale.py` | `04_scale_ladder.sh`, `20` | `so_qwen3_5-*/`; `results/tables/scale_ladder.md` |
+| A.1 timings; App. B setup (Table 6); App. C checks on the 122B mixture of experts and the Qwen3.5 ladder | `src/second_order.py`, `src/tiny_moe.py`, `src/compare_scale.py` | `04_scale_ladder.sh`, `20` | `so_qwen3_5-*/`; `results/tables/scale_ladder.md` |
 | Figures 1-9 | `paper/figs_paper.py`, `paper/f5_paper.py`, `paper/f8_lines.py` | `21_figures.sh` | `figures/F*.pdf` (below) |
 
 Figure files: Fig. 1 `F0_schematic`, Fig. 2 `F1_taylor_error`, Fig. 3 `F2_bend_vs_depth`, Fig. 4 `F6_matters`,
@@ -134,7 +134,7 @@ hold its text. Notes on regenerating:
 - Space-token fix. Qwen tokenizers split a number after a space into a bare space token and digits (`' 9'` ->
   `' '`, `'9'`), and the first version of the answer-variant rule in `src/second_order.py` matched numbers by that
   space token. The rule now takes the first non-space token. The multi-hop and order-ops lens comparison (`B3x_a`)
-  and the App. Q reading were rerun with it (`second_order_v1/wsfix/`, in `02_qwen38_27b.sh`); the other four sets
+  and the App. P reading were rerun with it (`second_order_v1/wsfix/`, in `02_qwen38_27b.sh`); the other four sets
   have no numeric intermediates.
 - `src/fit_d1_family.py` re-seeds its bootstrap for each (model, direction type), so a model's intervals do not
   depend on which other models one call fits.
@@ -149,8 +149,8 @@ hold its text. Notes on regenerating:
 ## Step 5: what lines of a proof do together (Section 8)
 
 Section 8 pushes along directions that the data define, in Lean proofs read by a theorem prover. Its protocol and
-tables are Appendices K-P; the numeric-intermediate control is in App. Q, the precision of its finite-difference
-checks in App. C.
+tables are Appendices J-O; the numeric-intermediate control is in App. P, the precision of its finite-difference
+checks in App. B.
 
 **Models.** Goedel-LM/Goedel-Prover-V2-8B (the prover, P), Qwen/Qwen3-8B-Base (its base, B) and Qwen/Qwen3-8B (the
 chat model trained from the same base, C; depth curves only). The numeric-intermediate control uses Qwen/Qwen3.8-27B,
@@ -180,14 +180,14 @@ those under `Mathlib/`), in byte order, shuffled with seed 20261121; the first 6
 
 | Section 8 | script | runner | output (`$QLENS_OUT/...` unless noted) |
 |---|---|---|---|
-| 8.1 setting: contexts before a tactic, edits and their pushes; App. K protocol, App. D checks | `src/lean_qlens.py --stage data,check` | `12_lean.sh` | `lean_v1/data/contexts.pt` (holds research-library token ids: keep it private), `lean_v1/<model>/check.json` |
-| 8.2 the bend sets the dose of a proof edit (E2); 8.3 two edits, direction of their interaction (E3); App. L | `src/lean_qlens.py --stage E23,gate2`, `src/summarize_lean_qlens.py` | `12`, `20` | `lean_v1/<model>/{E23,gate2}_{RH,ML}.json`, `lean_v1/summary.json`; `results/tables/lean_qlens_results.md` |
-| 8.4 which lines act together: exact pair removal against Q, path-averaged Q and third order, with nulls; App. M protocol, N tables, O named failures | `src/responsibility_map_v2.py` (uses `src/responsibility_map.py`, `src/lean_qlens.py`) | `13_resp_maps.sh` | `resp_map_v2/resp_v2_{ML,FW,MLnull,FWnull}.json`, `lean_v1/data/resp_map_v2/resp_v2_RH.json` (holds the library's text: keep it private) |
-| 8.4 cost of the pair readouts at 12, 50 and 200 lines; App. P | `src/cost_curve.py` | `13` | `resp_map_v2/cost_curve/cost_curve.json` |
-| App. C precision of the finite-difference checks, fp32 against fp64 | `src/fd_precision.py` | `13` | `resp_map_v2/fd_precision/` |
-| 8.5 fine-tuning moves the bend where it matters (E1, depth curves on Lean and prose); App. L | `src/lean_qlens.py --stage E1` | `12` | `lean_v1/<model>/E1_{RH,ML,FW}.{json,pt}` |
-| 8.6 what the bend does not name (E4, token readout of flipping edits); App. L | `src/lean_qlens.py --stage E4` | `12` | `lean_v1/<model>/E4_{RH,ML}.json` |
-| App. Q numeric intermediates: does Q(d,d)/2 raise the intermediate or every digit? | `src/qlens_numbers_ctrl.py` (imports `src/qlens_app.py`, the Gradio demo, for its model, fitted J-lens and sweep) | `14_numbers_ctrl.sh` | `orderops_layers/ctrl_order-ops.json` |
+| 8.1 setting: contexts before a tactic, edits and their pushes; App. J protocol, App. C checks | `src/lean_qlens.py --stage data,check` | `12_lean.sh` | `lean_v1/data/contexts.pt` (holds research-library token ids: keep it private), `lean_v1/<model>/check.json` |
+| 8.2 the bend sets the dose of a proof edit (E2); 8.3 two edits, direction of their interaction (E3); App. K | `src/lean_qlens.py --stage E23,gate2`, `src/summarize_lean_qlens.py` | `12`, `20` | `lean_v1/<model>/{E23,gate2}_{RH,ML}.json`, `lean_v1/summary.json`; `results/tables/lean_qlens_results.md` |
+| 8.4 which lines act together: exact pair removal against Q, path-averaged Q and third order, with nulls; App. L protocol, M tables, N named failures | `src/responsibility_map_v2.py` (uses `src/responsibility_map.py`, `src/lean_qlens.py`) | `13_resp_maps.sh` | `resp_map_v2/resp_v2_{ML,FW,MLnull,FWnull}.json`, `lean_v1/data/resp_map_v2/resp_v2_RH.json` (holds the library's text: keep it private) |
+| 8.4 cost of the pair readouts at 12, 50 and 200 lines; App. O | `src/cost_curve.py` | `13` | `resp_map_v2/cost_curve/cost_curve.json` |
+| App. B precision of the finite-difference checks, fp32 against fp64 | `src/fd_precision.py` | `13` | `resp_map_v2/fd_precision/` |
+| 8.5 what fine-tuning changes in the bend (E1, depth curves on Lean and prose); App. K | `src/lean_qlens.py --stage E1` | `12` | `lean_v1/<model>/E1_{RH,ML,FW}.{json,pt}` |
+| 8.6 what the bend does not name (E4, token readout of flipping edits); App. K | `src/lean_qlens.py --stage E4` | `12` | `lean_v1/<model>/E4_{RH,ML}.json` |
+| App. P numeric intermediates: does Q(d,d)/2 raise the intermediate or every digit? | `src/qlens_numbers_ctrl.py` (imports `src/qlens_app.py`, the Gradio demo, for its model, fitted J-lens and sweep) | `14_numbers_ctrl.sh` | `orderops_layers/ctrl_order-ops.json` |
 | claims rows of all of the above | `paper/claims_v84.py` (called by `paper/claims.py`) | `20` | `results/claims.csv` (900 rows) |
 | Fig. 8 | `paper/f8_lines.py` | `21_figures.sh` | `figures/F8_lines.{pdf,png}` |
 
