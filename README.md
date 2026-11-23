@@ -1,7 +1,7 @@
 # Q-lens: exact second-order readouts across layers
 
 **Code for the paper "The Q-Lens: Exact Second-Order Readouts Show That Language Models Bend Across Layers"
-(Soham Padia, 2026).** This is not QLens (arXiv:2510.11963) or Query Lens (arXiv:2606.07617), which are different
+(Soham H. Padia, 2026).** This is not QLens (arXiv:2510.11963) or Query Lens (arXiv:2606.07617), which are different
 works.
 
 The Q-lens is the exact second-order term Q(u, v) of a downstream readout of a language model: push the residual
@@ -252,7 +252,7 @@ arXiv id TBD.
 ```bibtex
 @misc{padia2026qlens,
   title         = {The Q-Lens: Exact Second-Order Readouts Show That Language Models Bend Across Layers},
-  author        = {Soham Padia},
+  author        = {Soham H. Padia},
   year          = {2026},
   eprint        = {TBD},
   archivePrefix = {arXiv}
